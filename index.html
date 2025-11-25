@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ettore Liotta - Portfolio</title>
+    <meta name="description" content="Portfolio di Ettore Liotta - Ingegnere e sviluppatore">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-wrapper">
+            <!-- Hamburger Menu (Mobile Only) -->
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-main">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#progetti" class="nav-link" data-i18n="nav.projects">Progetti</a></li>
+                    <li><a href="#formazione" class="nav-link" data-i18n="nav.education">Formazione</a></li>
+                    <li><a href="#esperienza" class="nav-link" data-i18n="nav.experience">Esperienza</a></li>
+                    <li><a href="#competenze" class="nav-link" data-i18n="nav.skills">Competenze</a></li>
+                    <li><a href="#contatti" class="nav-link" data-i18n="nav.contact">Contatti</a></li>
+                </ul>
+                <a href="#home" class="nav-logo hidden">Ettore Liotta</a>
+                <a href="#" class="cv-download-btn desktop-only" id="cvDownloadBtn">
+                    <span>Download CV</span>
+                    <span class="download-icon">↓</span>
+                </a>
+            </div>
+
+            <!-- Mobile Center Button: CV Download / Name -->
+            <a href="#" class="mobile-center-btn" id="mobileCenterBtn">
+                <span class="mobile-cv-text">Download CV</span>
+                <span class="mobile-cv-icon">↓</span>
+                <span class="mobile-name-text">Ettore Liotta</span>
+            </a>
+            <!-- Removed standalone cv-download-btn -->
+            <div class="language-switcher">
+                <button class="language-btn" id="languageBtn">
+                    <span class="current-lang">🇮🇹 IT</span>
+                    <span class="dropdown-arrow">▼</span>
+                </button>
+                <div class="language-dropdown" id="languageDropdown">
+                    <button class="language-option" data-lang="it">🇮🇹 Italiano</button>
+                    <button class="language-option" data-lang="en">🇬🇧 English</button>
+                    <button class="language-option" data-lang="de">🇩🇪 Deutsch</button>
+                    <button class="language-option" data-lang="da">🇩🇰 Dansk</button>
+                    <button class="language-option" data-lang="fr">🇫🇷 Français</button>
+                    <button class="language-option" data-lang="es">🇪🇸 Español</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-greeting">Ciao, io sono</p>
+                <h1 class="hero-title">Ettore Liotta</h1>
+                <!-- Subtitle removed as per user request -->
+                <p class="hero-description">
+                    Trasformo dati complessi in strategie vincenti e idee creative in esperienze digitali coinvolgenti.
+                </p>
+            </div>
+            <div class="scroll-down-indicator">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+                <span class="arrow"></span>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="../.gemini/antigravity/brain/1dbc3dda-c71e-4174-b608-c9a0dac29224/ettore_profile_photo_1764058736425.png"
+                        alt="Ettore Liotta" id="heroImage"
+                        style="width: 100%; border-radius: var(--radius-xl); box-shadow: var(--shadow-xl);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="progetti" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Progetti</h2>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>FlyBag</h3>
+                    <span class="project-tag">In Corso</span>
+                </div>
+                <p class="project-description">
+                    Creazione di un servizio innovativo per migliorare l'esperienza di shopping per i turisti.
+                    Come Co-founder e UX/UI Designer, mi occupo della progettazione dell'interfaccia utente e
+                    dell'esperienza complessiva del servizio.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">UX/UI Design</span>
+                    <span class="tech-tag">Figma</span>
+                    <span class="tech-tag">Tourism</span>
+                    <span class="tech-tag">E-commerce</span>
+                </div>
+                <a href="https://flybag.it/" target="_blank" class="btn btn-primary"
+                    style="margin-top: var(--spacing-md); display: inline-block;">Visita il sito</a>
+            </div>
+            <div class="project-card" style="margin-top: var(--spacing-lg);">
+                <div class="project-header">
+                    <h3>Make It A Case Competition</h3>
+                    <span class="project-tag">Completato</span>
+                </div>
+                <p class="project-description">
+                    Partecipazione con un team alla competizione "Make It A Case", analizzando e risolvendo con successo
+                    sfide aziendali reali attraverso approcci innovativi e data-driven.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Business Analysis</span>
+                    <span class="tech-tag">Problem Solving</span>
+                    <span class="tech-tag">Team Work</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formazione Accademica Section -->
+    <section id="formazione" class="section education">
+        <div class="container">
+            <h2 class="section-title">Formazione Accademica</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>LUM – Libera Università Mediterranea "Jean Monnet"</h3>
+                            <span class="timeline-date">09/2023 - 07/2026</span>
+                        </div>
+                        <p class="timeline-subtitle">Laurea in Business Administration</p>
+                        <p class="timeline-description">
+                            Partecipazione con un team alla competizione "Make It A Case", analizzando e risolvendo con
+                            successo
+                            sfide aziendali reali. Focus su gestione aziendale, innovazione e imprenditorialità.
+                        </p>
+                        <p class="timeline-location">📍 Casamassima, Bari</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Westfälische Hochschule</h3>
+                            <span class="timeline-date">09/2025 - 02/2026</span>
+                        </div>
+                        <p class="timeline-subtitle">Erasmus+ Exchange Program</p>
+                        <p class="timeline-description">
+                            Programma di scambio internazionale per ampliare le competenze in ambito business e
+                            management
+                            in un contesto europeo.
+                        </p>
+                        <p class="timeline-location">📍 Gelsenkirchen, Germania</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Liceo Scientifico "Gaetano Salvemini"</h3>
+                            <span class="timeline-date">09/2017 - 07/2022</span>
+                        </div>
+                        <p class="timeline-subtitle">Curriculum Scientifico Cambridge/Comunicazione</p>
+                        <p class="timeline-description">
+                            Partecipazione a corsi di teatro, creazione di contenuti (pubblicità, fotografia, video
+                            editing),
+                            e programma Associazione Diplomatici.
+                        </p>
+                        <p class="timeline-location">📍 Bari, Italia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Esperienza Section -->
+    <section id="esperienza" class="section experience">
+        <div class="container">
+            <h2 class="section-title">Esperienza</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>FlyBag</h3>
+                        <span class="experience-period">12/2024 - Presente</span>
+                    </div>
+                    <p class="experience-role">Co-founder & UX/UI Designer</p>
+                    <p class="experience-description">
+                        Creazione di un servizio per migliorare l'esperienza di shopping per i turisti.
+                        Responsabile della progettazione dell'interfaccia utente e dell'esperienza complessiva del
+                        servizio.
+                    </p>
+                    <p class="experience-location">📍 Bari, Italia</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Ernst & Young (EY)</h3>
+                        <span class="experience-period">10/2024 - Presente</span>
+                    </div>
+                    <p class="experience-role">Campus Ambassador</p>
+                    <p class="experience-description">
+                        Collegamento tra EY e l'università, promozione di eventi e opportunità agli studenti.
+                        Organizzazione di attività di networking nel campus per aumentare l'engagement e la
+                        consapevolezza dei programmi EY.
+                    </p>
+                    <p class="experience-location">📍 Bari, Italia</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Impact Hub Bari</h3>
+                        <span class="experience-period">08/2024 - 11/2024</span>
+                    </div>
+                    <p class="experience-role">Community Host</p>
+                    <p class="experience-description">
+                        Accoglienza ospiti e gestione delle operazioni dello spazio di co-working, garantendo un
+                        ambiente professionale.
+                        Organizzazione e facilitazione di attività di networking per rafforzare la comunità
+                        imprenditoriale locale.
+                    </p>
+                    <p class="experience-location">📍 Fiera del Levante, Bari</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competenze Section (Merged) -->
+    <section id="competenze" class="section skills">
+        <div class="container">
+            <h2 class="section-title">Competenze & Interessi</h2>
+
+            <!-- Key Skills Cards -->
+            <div class="engineering-grid" style="margin-bottom: var(--spacing-2xl);">
+                <div class="engineering-card">
+                    <div class="card-icon">🎨</div>
+                    <h3>UX/UI Design</h3>
+                    <p>Progettazione di interfacce utente intuitive e user experience coinvolgenti utilizzando Figma e
+                        principi di design thinking.</p>
+                </div>
+                <div class="engineering-card">
+                    <div class="card-icon">💼</div>
+                    <h3>Business Analysis</h3>
+                    <p>Analisi di sfide aziendali reali, problem-solving strategico e sviluppo di soluzioni innovative
+                        data-driven.</p>
+                </div>
+                <div class="engineering-card">
+                    <div class="card-icon">🎬</div>
+                    <h3>Content Creation</h3>
+                    <p>Creazione di contenuti multimediali: fotografia, video editing, pubblicità e comunicazione
+                        visiva.</p>
+                </div>
+            </div>
+
+            <!-- Detailed Skills Grid -->
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Competenze Tecniche</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Microsoft Office Suite</span>
+                        <span class="skill-tag">Python (CS50x)</span>
+                        <span class="skill-tag">Video Editing</span>
+                        <span class="skill-tag">Fotografia</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Lingue</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">🇮🇹 Italiano (Madrelingua)</span>
+                        <span class="skill-tag">🇬🇧 Inglese (Fluente - IELTS 6.5)</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Problem-Solving</span>
+                        <span class="skill-tag">Comunicazione Efficace</span>
+                        <span class="skill-tag">Creatività</span>
+                        <span class="skill-tag">Time Management</span>
+                        <span class="skill-tag">Critical Thinking</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Interessi</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Data Analytics & BI</span>
+                        <span class="skill-tag">Imprenditorialità</span>
+                        <span class="skill-tag">Apprendimento Continuo</span>
+                        <span class="skill-tag">Progetti Creativi</span>
+                        <span class="skill-tag">Sport & Fitness</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contattami Section -->
+    <section id="contatti" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Contattami</h2>
+            <div class="contact-content">
+                <p class="contact-intro">
+                    Sono sempre interessato a nuove opportunità e collaborazioni.
+                    Non esitare a contattarmi!
+                </p>
+                <div class="contact-methods">
+                    <a href="mailto:ettore@example.com" class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <p>ettore@example.com</p>
+                    </a>
+                    <a href="https://linkedin.com/in/ettoreliotta" target="_blank" class="contact-card">
+                        <div class="contact-icon">💼</div>
+                        <h3>LinkedIn</h3>
+                        <p>linkedin.com/in/ettoreliotta</p>
+                    </a>
+                    <a href="https://instagram.com/ettoreliotta" target="_blank" class="contact-card">
+                        <div class="contact-icon">📸</div>
+                        <h3>Instagram</h3>
+                        <p>@ettoreliotta</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Ettore Liotta. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
