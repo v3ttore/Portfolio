@@ -14,10 +14,10 @@ export const metadata: Metadata = {
   description: "Portfolio di Ettore Liotta - Business Administration student, UX/UI Designer, and Co-founder of FlyBag",
   icons: {
     icon: [
-      { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
-      { url: '/icon.png', sizes: '192x192', type: 'image/png' },
+      { url: '/Portfolio/favicon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/Portfolio/icon.png', sizes: '192x192', type: 'image/png' },
     ],
-    apple: '/icon.png',
+    apple: '/Portfolio/icon.png',
   },
 };
 

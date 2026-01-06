@@ -5,12 +5,12 @@ import Link from 'next/link';
 import { useLanguage } from '@/hooks/useLanguage';
 
 const photos = [
-    { id: 1, src: '/photography/photo-1.jpg', location: 'Hangzhou, China', year: '2025' },
-    { id: 2, src: '/photography/photo-2.jpg', location: 'Hangzhou, China', year: '2025' },
-    { id: 3, src: '/photography/photo-3.jpg', location: 'Hangzhou, China', year: '2025' },
-    { id: 4, src: '/photography/photo-4.jpg', location: 'Hangzhou, China', year: '2025' },
-    { id: 5, src: '/photography/photo-5.jpg', location: 'Copenhagen, Denmark', year: '2025' },
-    { id: 6, src: '/photography/photo-6.jpg', location: 'Frankfurt, Germany', year: '2025' },
+    { id: 1, src: '/Portfolio/photography/photo-1.jpg', location: 'Hangzhou, China', year: '2025' },
+    { id: 2, src: '/Portfolio/photography/photo-2.jpg', location: 'Hangzhou, China', year: '2025' },
+    { id: 3, src: '/Portfolio/photography/photo-3.jpg', location: 'Hangzhou, China', year: '2025' },
+    { id: 4, src: '/Portfolio/photography/photo-4.jpg', location: 'Hangzhou, China', year: '2025' },
+    { id: 5, src: '/Portfolio/photography/photo-5.jpg', location: 'Copenhagen, Denmark', year: '2025' },
+    { id: 6, src: '/Portfolio/photography/photo-6.jpg', location: 'Frankfurt, Germany', year: '2025' },
 ];
 
 export default function PhotographyPage() {

@@ -475,7 +475,7 @@ export default function Home() {
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
                 <button
-                  onClick={() => openPdf('/documents/binp.pdf')}
+                  onClick={() => openPdf('/Portfolio/documents/binp.pdf')}
                   className="pitch-button"
                 >
                   {t.competitions.binp.viewProject}
@@ -514,7 +514,7 @@ export default function Home() {
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
                 <button
-                  onClick={() => openPdf('/documents/make-it-a-case.pdf')}
+                  onClick={() => openPdf('/Portfolio/documents/make-it-a-case.pdf')}
                   className="pitch-button"
                 >
                   {t.competitions.makeItACase.viewProject}
