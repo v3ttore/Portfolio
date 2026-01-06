@@ -18,7 +18,7 @@ export default function Footer({ }: FooterProps) {
                         {/* Profile Image */}
                         <div className="footer-image-wrapper">
                             <Image
-                                src="/profile.jpg"
+                                src="/Portfolio/profile.jpg"
                                 alt="Ettore Liotta"
                                 width={100}
                                 height={100}

@@ -108,7 +108,7 @@ export default function Home() {
           <div className="hero-image">
             <div className="image-wrapper">
               <Image
-                src="/profile.jpg"
+                src="/Portfolio/profile.jpg"
                 alt="Ettore Liotta"
                 width={400}
                 height={400}
@@ -130,7 +130,7 @@ export default function Home() {
             <div className="experience-card">
               <div className="experience-logo-container">
                 <Image
-                  src="/flybag-logo.png"
+                  src="/Portfolio/flybag-logo.png"
                   alt="FlyBag Logo"
                   width={0}
                   height={0}
@@ -167,7 +167,7 @@ export default function Home() {
             <div className="experience-card">
               <div className="experience-logo-container">
                 <Image
-                  src="/ey-logo.png"
+                  src="/Portfolio/ey-logo.png"
                   alt="EY Logo"
                   width={0}
                   height={0}
@@ -194,7 +194,7 @@ export default function Home() {
             <div className="experience-card">
               <div className="experience-logo-container">
                 <Image
-                  src="/impact-hub-logo.png"
+                  src="/Portfolio/impact-hub-logo.png"
                   alt="Impact Hub Logo"
                   width={0}
                   height={0}
@@ -236,7 +236,7 @@ export default function Home() {
               <div className="timeline-content">
                 <div className="timeline-header">
                   <Image
-                    src="/lum-logo.png"
+                    src="/Portfolio/lum-logo.png"
                     alt="LUM Logo"
                     width={70}
                     height={70}
@@ -258,7 +258,7 @@ export default function Home() {
                     {/* Erasmus */}
                     <div className="timeline-sub-item">
                       <Image
-                        src="/westfalische-logo.png"
+                        src="/Portfolio/westfalische-logo.png"
                         alt="Westfälische Hochschule Logo"
                         width={50}
                         height={50}
@@ -280,7 +280,7 @@ export default function Home() {
                     {/* YES China */}
                     <div className="timeline-sub-item">
                       <Image
-                        src="/china-jiliang-logo.png"
+                        src="/Portfolio/china-jiliang-logo.png"
                         alt="China Jiliang University Logo"
                         width={50}
                         height={50}
@@ -302,7 +302,7 @@ export default function Home() {
                     {/* Excel Course */}
                     <div className="timeline-sub-item">
                       <Image
-                        src="/lum-logo.png"
+                        src="/Portfolio/lum-logo.png"
                         alt="LUM Logo"
                         width={50}
                         height={50}
@@ -332,7 +332,7 @@ export default function Home() {
               <div className="timeline-content">
                 <div className="timeline-header">
                   <Image
-                    src="/salvemini-logo.png"
+                    src="/Portfolio/salvemini-logo.png"
                     alt="Liceo Salvemini Logo"
                     width={70}
                     height={70}
@@ -459,7 +459,7 @@ export default function Home() {
             <div className="competition-card-compact binp-card">
               <div className="competition-compact-header">
                 <Image
-                  src="/binp-logo.png"
+                  src="/Portfolio/binp-logo.png"
                   alt="Binp Logo"
                   width={50}
                   height={50}
@@ -494,7 +494,7 @@ export default function Home() {
             <div className="competition-card-compact make-it-a-case-card">
               <div className="competition-compact-header">
                 <Image
-                  src="/make-it-a-case-logo.png"
+                  src="/Portfolio/make-it-a-case-logo.png"
                   alt="Make It A Case Logo"
                   width={50}
                   height={50}
