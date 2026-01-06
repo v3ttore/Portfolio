@@ -160,7 +160,8 @@ export default function Navbar({ currentLang, onLanguageChange, t, isSubpage = f
                 {/* Section 2: CV Download Button */}
                 <div className="nav-glass-section nav-cv-section">
                     <a
-                        href="#"
+                        href="/Portfolio/documents/cv.pdf"
+                        download="Ettore_Liotta_CV.pdf"
                         className={`cv-download-btn ${showName ? 'show-name' : ''}`}
                         id="cvDownloadBtn"
                         onClick={handleCVButtonClick}
