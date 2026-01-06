@@ -240,15 +240,10 @@ if (savedLanguage) {
 
 // ===== Navbar Scroll Effect =====
 const navbar = document.getElementById('navbar');
-const navMain = document.querySelector('.nav-main');
-const navLogo = document.querySelector('.nav-logo');
-const mobileCenterBtn = document.querySelector('.mobile-center-btn');
-const heroSection = document.querySelector('.hero');
 let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    const heroHeight = heroSection ? heroSection.offsetHeight : 0;
 
     if (currentScroll > 100) {
         navbar.classList.add('scrolled');
@@ -256,37 +251,45 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('scrolled');
     }
 
-    // Show logo only after scrolling past hero section
+    // Dynamic CV Button Logic (Desktop & Mobile)
     const cvDownloadBtn = document.getElementById('cvDownloadBtn');
+    const heroSection = document.querySelector('.hero');
 
-    if (currentScroll > heroHeight - 100) {
-        if (cvDownloadBtn) cvDownloadBtn.classList.add('hidden');
-        navLogo.classList.remove('hidden');
-        // Small delay to allow display:block to apply before opacity transition
-        requestAnimationFrame(() => {
-            navLogo.classList.add('visible');
-        });
-        navMain.classList.add('logo-visible');
+    if (cvDownloadBtn && heroSection) {
+        const heroHeight = heroSection.offsetHeight;
+        const scrollThreshold = heroHeight - 100; // Trigger near end of hero section
 
-        // Mobile: swap CV button to name
-        if (mobileCenterBtn) {
-            mobileCenterBtn.classList.add('show-name');
-            mobileCenterBtn.href = '#home';
-        }
-    } else {
-        navLogo.classList.remove('visible');
-        navLogo.classList.add('hidden');
-        if (cvDownloadBtn) cvDownloadBtn.classList.remove('hidden');
-        navMain.classList.remove('logo-visible');
+        // Debug: log to console
+        console.log('Hero height:', heroHeight, 'Threshold:', scrollThreshold, 'Current scroll:', currentScroll);
 
-        // Mobile: show CV button
-        if (mobileCenterBtn) {
-            mobileCenterBtn.classList.remove('show-name');
-            mobileCenterBtn.href = '#'; // CV download link
+        if (currentScroll > scrollThreshold) {
+            cvDownloadBtn.classList.add('show-name');
+            cvDownloadBtn.setAttribute('href', '#home');
+            console.log('Name should be visible now');
+        } else {
+            cvDownloadBtn.classList.remove('show-name');
+            cvDownloadBtn.setAttribute('href', '#');
         }
     }
 
     lastScroll = currentScroll;
+});
+
+// Handle click on dynamic button to scroll top if it's showing name
+// Ensure this is run once DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    const cvDownloadBtn = document.getElementById('cvDownloadBtn');
+    if (cvDownloadBtn) {
+        cvDownloadBtn.addEventListener('click', (e) => {
+            if (cvDownloadBtn.classList.contains('show-name')) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    }
 });
 
 // ===== Smooth Scroll for Navigation Links =====

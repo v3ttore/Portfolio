@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import PDFModal from '@/components/PDFModal';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -402,15 +403,15 @@ export default function Home() {
         <div className="container">
           <h2 className="section-title">{t.sections.interests}</h2>
           <div className="interests-grid">
-            <a href="/photography" className="interest-card">
+            <Link href="/photography" className="interest-card">
               <div className="interest-icon">📷</div>
               <div className="interest-content">
                 <h4>{t.interests.photography}</h4>
                 <p>{t.interests.photographyDesc}</p>
               </div>
-            </a>
+            </Link>
 
-            <a href="/youtube" className="interest-card youtube-card">
+            <Link href="/youtube" className="interest-card youtube-card">
               <div className="interest-icon">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="#FF0000">
                   <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
@@ -420,7 +421,7 @@ export default function Home() {
                 <h4>{t.interests.youtube}</h4>
                 <p>{t.interests.youtubeDesc}</p>
               </div>
-            </a>
+            </Link>
 
             <a href="https://www.strava.com/athletes/62931725" target="_blank" rel="noopener noreferrer" className="interest-card strava-card">
               <div className="interest-icon">

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography - Ettore Liotta</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px 0;
+        }
+
+        .gallery-item {
+            background: #f0f0f0;
+            aspect-ratio: 1;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 100px 0 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation (Simplified for subpage) -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-wrapper">
+            <div class="nav-glass-section nav-links-section">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">← Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>Fotografia</h1>
+            <p>Una collezione dei miei scatti migliori.</p>
+        </header>
+
+        <div class="gallery-grid">
+            <!-- Placeholders -->
+            <div class="gallery-item">
+                <div
+                    style="width:100%;height:100%;background:#ddd;display:flex;align-items:center;justify-content:center;color:#888;">
+                    Foto 1</div>
+            </div>
+            <div class="gallery-item">
+                <div
+                    style="width:100%;height:100%;background:#ddd;display:flex;align-items:center;justify-content:center;color:#888;">
+                    Foto 2</div>
+            </div>
+            <div class="gallery-item">
+                <div
+                    style="width:100%;height:100%;background:#ddd;display:flex;align-items:center;justify-content:center;color:#888;">
+                    Foto 3</div>
+            </div>
+            <div class="gallery-item">
+                <div
+                    style="width:100%;height:100%;background:#ddd;display:flex;align-items:center;justify-content:center;color:#888;">
+                    Foto 4</div>
+            </div>
+            <div class="gallery-item">
+                <div
+                    style="width:100%;height:100%;background:#ddd;display:flex;align-items:center;justify-content:center;color:#888;">
+                    Foto 5</div>
+            </div>
+            <div class="gallery-item">
+                <div
+                    style="width:100%;height:100%;background:#ddd;display:flex;align-items:center;justify-content:center;color:#888;">
+                    Foto 6</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
