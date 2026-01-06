@@ -43,7 +43,6 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('portfolio-nextjs/package-lock.json') }}-
       - name: Install dependencies
         run: npm ci
-        run: npm ci
       - name: Build
         run: npm run build
       - name: Upload artifact
