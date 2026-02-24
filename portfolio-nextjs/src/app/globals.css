@@ -1,28 +1,38 @@
 /* ===== CSS Variables & Design System ===== */
 :root {
-    /* Colors - Minimalist Black, White, Grey Theme */
-    --color-primary: hsl(0, 0%, 20%);
-    --color-primary-dark: hsl(0, 0%, 10%);
-    --color-primary-light: hsl(0, 0%, 95%);
-    --color-secondary: hsl(0, 0%, 15%);
-    --color-accent: hsl(0, 0%, 30%);
+    /* Colors - Vibrant Modern Theme */
+    --color-primary: #4F46E5;
+    /* Indigo */
+    --color-primary-dark: #3730A3;
+    --color-primary-light: #818CF8;
 
-    --color-text-primary: #000000;
-    /* Pure Black */
-    --color-text-secondary: hsl(0, 0%, 35%);
-    --color-text-light: hsl(0, 0%, 55%);
+    --color-secondary: #EC4899;
+    /* Pink */
+    --color-secondary-dark: #BE185D;
+    --color-secondary-light: #F472B6;
 
-    --color-bg-primary: hsl(0, 0%, 100%);
-    --color-bg-secondary: hsl(0, 0%, 98%);
-    --color-bg-tertiary: hsl(0, 0%, 95%);
+    --color-accent: #06B6D4;
+    /* Cyan */
 
-    --color-border: hsl(0, 0%, 90%);
-    --color-shadow: hsla(0, 0%, 0%, 0.1);
+    --color-text-primary: #111827;
+    /* Very dark blue-gray instead of pure black */
+    --color-text-secondary: #4B5563;
+    --color-text-light: #9CA3AF;
 
-    /* Gradients - Minimalist */
-    --gradient-primary: linear-gradient(135deg, hsl(0, 0%, 20%) 0%, hsl(0, 0%, 10%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(0, 0%, 25%) 0%, hsl(0, 0%, 15%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0, 0%, 98%) 0%, hsl(0, 0%, 100%) 100%);
+    --color-bg-primary: #F9FAFB;
+    --color-bg-secondary: #F3F4F6;
+    --color-bg-tertiary: #E5E7EB;
+
+    --color-border: #E5E7EB;
+    --color-shadow: rgba(17, 24, 39, 0.05);
+
+    /* Gradients - Playful & Vibrant */
+    --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    --gradient-secondary: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+    --gradient-subtle: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 100%);
+
+    /* Mesh Background Base */
+    --gradient-mesh: radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%), radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
 
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -51,18 +61,22 @@
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
 
-    /* Border Radius */
-    --radius-sm: 0.5rem;
-    --radius-md: 1rem;
-    --radius-lg: 1.5rem;
-    --radius-xl: 2rem;
+    /* Border Radius - Malleable & Soft */
+    --radius-sm: 0.75rem;
+    --radius-md: 1.25rem;
+    --radius-lg: 2rem;
+    --radius-xl: 2.5rem;
     --radius-full: 9999px;
 
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 var(--color-shadow);
-    --shadow-md: 0 4px 6px -1px var(--color-shadow);
-    --shadow-lg: 0 10px 15px -3px var(--color-shadow);
-    --shadow-xl: 0 20px 25px -5px var(--color-shadow);
+    /* Shadows - Deep & Soft */
+    --shadow-sm: 0 2px 4px -1px var(--color-shadow);
+    --shadow-md: 0 8px 16px -4px rgba(17, 24, 39, 0.08);
+    --shadow-lg: 0 16px 24px -6px rgba(17, 24, 39, 0.12);
+    --shadow-xl: 0 25px 35px -8px rgba(17, 24, 39, 0.15);
+
+    /* Glowing Shadows */
+    --shadow-glow-primary: 0 10px 25px -5px rgba(79, 70, 229, 0.4);
+    --shadow-glow-secondary: 0 10px 25px -5px rgba(236, 72, 153, 0.4);
 
     /* Transitions */
     --transition-fast: 150ms ease-in-out;
@@ -138,11 +152,11 @@ p {
 a {
     color: var(--color-primary);
     text-decoration: none;
-    transition: color var(--transition-base);
+    transition: all var(--transition-base);
 }
 
 a:hover {
-    color: var(--color-primary-dark);
+    color: var(--color-secondary);
 }
 
 img {
@@ -174,13 +188,38 @@ img {
 .section-title::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
     width: 60px;
-    height: 4px;
+    height: 6px;
     background: var(--gradient-primary);
     border-radius: var(--radius-full);
+    transition: width var(--transition-base);
+}
+
+.section-title:hover::after {
+    width: 100px;
+}
+
+/* Base Utility Animations */
+.animate-slide-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-slide-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Glassmorphism helpers */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 /* ===== Navigation - 3 Pill Layout ===== */
@@ -722,24 +761,25 @@ img {
 .hero::before {
     content: '';
     position: absolute;
-    top: -50%;
-    right: -20%;
-    width: 800px;
-    height: 800px;
-    background: radial-gradient(circle, hsla(0, 0%, 50%, 0.05) 0%, transparent 70%);
-    border-radius: 50%;
-    animation: float 20s ease-in-out infinite;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    /* Cute Gradient Background */
+    background:
+        radial-gradient(circle at 10% 20%, rgba(236, 72, 153, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(79, 70, 229, 0.1) 0%, transparent 60%);
+    animation: gradientShift 15s ease infinite alternate;
+    z-index: 0;
 }
 
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translate(0, 0) rotate(0deg);
+@keyframes gradientShift {
+    0% {
+        transform: scale(1) translate(0, 0);
     }
 
-    50% {
-        transform: translate(-50px, 50px) rotate(180deg);
+    100% {
+        transform: scale(1.1) translate(-20px, 20px);
     }
 }
 
@@ -780,12 +820,24 @@ img {
     font-size: var(--font-size-5xl);
     font-weight: var(--font-weight-bold);
     margin-bottom: var(--spacing-md);
-    color: var(--color-text-primary);
-    background: none;
-    -webkit-background-clip: unset;
-    -webkit-text-fill-color: unset;
-    background-clip: unset;
-    animation: fadeInUp 0.6s ease-out 0.2s backwards;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -moz-background-clip: text;
+    /* Add standard/fallback property */
+    display: inline-block;
+    animation: fadeInUp 0.6s ease-out 0.2s backwards, gradientPulse 3s ease infinite alternate;
+}
+
+@keyframes gradientPulse {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
 }
 
 .hero-description {
@@ -873,17 +925,20 @@ img {
     transition: all var(--transition-base);
     border: 2px solid transparent;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .btn-primary {
     background: var(--gradient-primary);
     color: white;
     box-shadow: var(--shadow-md);
+    border: none;
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: var(--shadow-glow-primary);
 }
 
 .btn-secondary {
@@ -893,25 +948,50 @@ img {
 }
 
 .btn-secondary:hover {
-    background: var(--color-primary-light);
-    transform: translateY(-2px);
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: var(--shadow-glow-primary);
 }
 
 /* ===== Projects Section ===== */
 
 
 .project-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: var(--spacing-xl);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    position: relative;
+    overflow: hidden;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-xl);
+    border-color: rgba(255, 255, 255, 0.9);
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.project-card:hover::before {
+    opacity: 1;
 }
 
 .project-header {
@@ -1415,6 +1495,28 @@ img {
     line-height: 1.8;
 }
 
+.read-more-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.read-more-btn {
+    background: transparent;
+    border: none;
+    color: var(--color-primary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    margin-top: var(--spacing-xs);
+    padding: 0;
+    transition: color var(--transition-base);
+}
+
+.read-more-btn:hover {
+    color: var(--color-secondary);
+}
+
 /* ===== Experience Section ===== */
 
 .experience-grid {
@@ -1429,19 +1531,21 @@ img {
     display: flex;
     gap: var(--spacing-lg);
     padding: var(--spacing-xl);
-    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: var(--radius-lg);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all var(--transition-base);
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    transition: all var(--transition-slow);
     position: relative;
     /* overflow: hidden; REMOVED to prevent logo cropping */
 }
 
 .experience-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    border-color: var(--color-primary);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+    border-color: rgba(255, 255, 255, 0.9);
 }
 
 /* Experience Logo Container */
@@ -2792,6 +2896,7 @@ img {
     background-color: rgba(0, 0, 0, 0.02);
     transform: translateY(-1px);
 }
+
 /* ===== YouTube Page Styles ===== */
 .youtube-container {
     max-width: 1200px;
@@ -3081,11 +3186,13 @@ img {
 }
 
 @keyframes fadeIn {
-    to { opacity: 1; }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes zoomIn {
-    to { 
+    to {
         opacity: 1;
         transform: scale(1) translateY(0);
     }

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import PDFModal from '@/components/PDFModal';
+import ReadMore from '@/components/ReadMore';
 import { useLanguage } from '@/hooks/useLanguage';
 
 export default function Home() {
@@ -37,27 +38,30 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    // Intersection Observer for animations
+    // Intersection Observer for animations - Modern approach with classes
     const observerOptions = {
       threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px',
+      rootMargin: '0px 0px -50px 0px',
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          (entry.target as HTMLElement).style.opacity = '1';
-          (entry.target as HTMLElement).style.transform = 'translateY(0)';
+          entry.target.classList.add('visible');
+          // Optional: stop watching once visible
+          // observer.unobserve(entry.target);
         }
       });
     }, observerOptions);
 
-    document.querySelectorAll('.section').forEach((section) => {
-      const el = section as HTMLElement;
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(30px)';
-      el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-      observer.observe(section);
+    // Apply animation class to elements instead of entire sections for a staggered feel
+    const animatedElements = document.querySelectorAll(
+      '.experience-card, .timeline-content, .engineering-card, .interest-card, .competition-card-compact, .hero-content'
+    );
+
+    animatedElements.forEach((el) => {
+      el.classList.add('animate-slide-up');
+      observer.observe(el);
     });
 
     return () => observer.disconnect();
@@ -146,9 +150,9 @@ export default function Home() {
                   </div>
                   <span className="experience-period">{t.experience.flybag.date}</span>
                 </div>
-                <p className="experience-description">
+                <ReadMore maxLength={120}>
                   {t.experience.flybag.description}
-                </p>
+                </ReadMore>
                 <div className="experience-footer">
                   <a href="https://maps.google.com/?q=Bari,Italia" target="_blank" rel="noopener noreferrer" className="location-badge">Bari, Italia</a>
                   <a href="https://flybag.it/" target="_blank" rel="noopener noreferrer" className="btn btn-flybag">
@@ -183,9 +187,9 @@ export default function Home() {
                   </div>
                   <span className="experience-period">{t.experience.ey.date}</span>
                 </div>
-                <p className="experience-description">
+                <ReadMore maxLength={120}>
                   {t.experience.ey.description}
-                </p>
+                </ReadMore>
                 <a href="https://maps.google.com/?q=Bari,Italia" target="_blank" rel="noopener noreferrer" className="location-badge">Bari, Italia</a>
               </div>
             </div>
@@ -210,9 +214,9 @@ export default function Home() {
                   </div>
                   <span className="experience-period">{t.experience.impactHub.date}</span>
                 </div>
-                <p className="experience-description">
+                <ReadMore maxLength={120}>
                   {t.experience.impactHub.description}
-                </p>
+                </ReadMore>
                 <a href="https://maps.google.com/?q=Fiera+del+Levante,Bari,Italia" target="_blank" rel="noopener noreferrer" className="location-badge">Fiera del Levante, Bari</a>
               </div>
             </div>
