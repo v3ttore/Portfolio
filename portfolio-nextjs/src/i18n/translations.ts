@@ -206,7 +206,7 @@ export const translations: Record<Language, Translations> = {
             flybag: {
                 role: 'Co-founder & UX/UI Designer',
                 description: "Creazione di un servizio innovativo per migliorare l'esperienza di shopping per i turisti. Responsabile della progettazione dell'interfaccia utente e dell'esperienza complessiva del servizio.",
-                date: '09/2024 - Presente',
+                date: '09/2024 - 02/2026',
             },
             ey: {
                 role: 'Campus Ambassador',
@@ -358,7 +358,7 @@ export const translations: Record<Language, Translations> = {
             flybag: {
                 role: 'Co-founder & UX/UI Designer',
                 description: 'Creation of an innovative service to improve the shopping experience for tourists. Responsible for UI design and overall service experience.',
-                date: '09/2024 - Present',
+                date: '09/2024 - 02/2026',
             },
             ey: {
                 role: 'Campus Ambassador',
@@ -511,7 +511,7 @@ export const translations: Record<Language, Translations> = {
             flybag: {
                 role: 'Mitbegründer & UX/UI Designer',
                 description: 'Entwicklung eines innovativen Dienstes zur Verbesserung des Einkaufserlebnisses für Touristen. Verantwortlich für UI-Design und das gesamte Serviceerlebnis.',
-                date: '09/2024 - Heute',
+                date: '09/2024 - 02/2026',
             },
             ey: {
                 role: 'Campus Ambassador',
@@ -664,7 +664,7 @@ export const translations: Record<Language, Translations> = {
             flybag: {
                 role: 'Co-fondateur & UX/UI Designer',
                 description: "Création d'un service innovant pour améliorer l'expérience d'achat des touristes. Responsable de la conception de l'interface utilisateur et de l'expérience globale du service.",
-                date: '09/2024 - Présent',
+                date: '09/2024 - 02/2026',
             },
             ey: {
                 role: 'Campus Ambassador',
@@ -817,7 +817,7 @@ export const translations: Record<Language, Translations> = {
             flybag: {
                 role: 'Cofundador & UX/UI Designer',
                 description: 'Creación de un servicio innovador para mejorar la experiencia de compra de los turistas. Responsable del diseño de la interfaz de usuario y la experiencia general del servicio.',
-                date: '09/2024 - Presente',
+                date: '09/2024 - 02/2026',
             },
             ey: {
                 role: 'Campus Ambassador',
@@ -970,7 +970,7 @@ export const translations: Record<Language, Translations> = {
             flybag: {
                 role: 'Medstifter & UX/UI Designer',
                 description: 'Skabelse af en innovativ service til at forbedre shoppingoplevelsen for turister. Ansvarlig for UI-design og den samlede serviceoplevelse.',
-                date: '09/2024 - Nu',
+                date: '09/2024 - 02/2026',
             },
             ey: {
                 role: 'Campus Ambassador',
