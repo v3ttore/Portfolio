@@ -128,6 +128,33 @@ export default function Home() {
           <h2 className="section-title">{t.sections.experience}</h2>
           <div className="experience-grid">
 
+            {/* Ernst & Young */}
+            <div className="experience-card">
+              <div className="experience-logo-container">
+                <Image
+                  src="/Portfolio/ey-logo.png"
+                  alt="EY Logo"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  className="experience-logo"
+                />
+              </div>
+              <div className="experience-content">
+                <div className="experience-top">
+                  <div className="experience-title-group">
+                    <h3>Ernst & Young (EY)</h3>
+                    <span className="experience-role">{t.experience.ey.role}</span>
+                  </div>
+                  <span className="experience-period">{t.experience.ey.date}</span>
+                </div>
+                <ReadMore maxLength={120}>
+                  {t.experience.ey.description}
+                </ReadMore>
+                <a href="https://maps.google.com/?q=Bari,Italia" target="_blank" rel="noopener noreferrer" className="location-badge">{t.locations.bariItaly}</a>
+              </div>
+            </div>
+
             {/* FlyBag */}
             <div className="experience-card">
               <div className="experience-logo-container">
@@ -162,33 +189,6 @@ export default function Home() {
                     </svg>
                   </a>
                 </div>
-              </div>
-            </div>
-
-            {/* Ernst & Young */}
-            <div className="experience-card">
-              <div className="experience-logo-container">
-                <Image
-                  src="/Portfolio/ey-logo.png"
-                  alt="EY Logo"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  className="experience-logo"
-                />
-              </div>
-              <div className="experience-content">
-                <div className="experience-top">
-                  <div className="experience-title-group">
-                    <h3>Ernst & Young (EY)</h3>
-                    <span className="experience-role">{t.experience.ey.role}</span>
-                  </div>
-                  <span className="experience-period">{t.experience.ey.date}</span>
-                </div>
-                <ReadMore maxLength={120}>
-                  {t.experience.ey.description}
-                </ReadMore>
-                <a href="https://maps.google.com/?q=Bari,Italia" target="_blank" rel="noopener noreferrer" className="location-badge">{t.locations.bariItaly}</a>
               </div>
             </div>
 
