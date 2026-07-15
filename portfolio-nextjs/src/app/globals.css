@@ -1548,21 +1548,31 @@ img {
 .experience-top {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-xs);
 }
 
 .experience-title-group {
     flex: 1;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
 }
 
-.timeline-title-group h3,
-.experience-title-group h3 {
+.timeline-title-group h3 {
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-bold);
     color: var(--color-text-primary);
     margin-bottom: 4px;
+}
+
+.experience-title-group h3 {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    margin-bottom: 0;
     /* Prevent overflow on mobile */
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -1577,7 +1587,7 @@ img {
     background: rgba(0, 0, 0, 0.04);
     padding: 4px 12px;
     border-radius: var(--radius-full);
-    margin-top: 4px;
+    margin-top: 0;
 }
 
 /* Date Badge */
