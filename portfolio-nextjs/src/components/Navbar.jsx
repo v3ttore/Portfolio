@@ -2,16 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Language, languages } from '@/i18n/translations';
+import { languages } from '@/i18n/translations';
 
-interface NavbarProps {
-    currentLang: Language;
-    onLanguageChange: (lang: Language) => void;
-    t: any;
-    isSubpage?: boolean;
-}
-
-export default function Navbar({ currentLang, onLanguageChange, t, isSubpage = false }: NavbarProps) {
+export default function Navbar({ currentLang, onLanguageChange, t, isSubpage = false }) {
     const [scrolled, setScrolled] = useState(false);
     const [showName, setShowName] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -35,14 +28,14 @@ export default function Navbar({ currentLang, onLanguageChange, t, isSubpage = f
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const handleCVButtonClick = (e: React.MouseEvent) => {
+    const handleCVButtonClick = (e) => {
         if (showName) {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     };
 
-    const handleLanguageSelect = (lang: Language) => {
+    const handleLanguageSelect = (lang) => {
         onLanguageChange(lang);
         setLangDropdownOpen(false);
     };
@@ -58,7 +51,7 @@ export default function Navbar({ currentLang, onLanguageChange, t, isSubpage = f
                     top: 0,
                     left: 0,
                     width: '100%',
-                    pointerEvents: 'none' // Allow clicks to pass through wrapper
+                    pointerEvents: 'none'
                 }}
             >
                 <div
@@ -66,7 +59,7 @@ export default function Navbar({ currentLang, onLanguageChange, t, isSubpage = f
                     style={{
                         display: 'flex',
                         justifyContent: 'center',
-                        pointerEvents: 'auto', // Re-enable clicks on content
+                        pointerEvents: 'auto',
                         width: '100%',
                         padding: '10px 0'
                     }}
@@ -160,8 +153,8 @@ export default function Navbar({ currentLang, onLanguageChange, t, isSubpage = f
                 {/* Section 2: CV Download Button */}
                 <div className="nav-glass-section nav-cv-section">
                     <a
-                        href="/Portfolio/documents/Ettore_Liotta_CV-en.pdf"
-                        download="Ettore_Liotta_CV-en.pdf"
+                        href={currentLang === 'it' ? '/Portfolio/documents/Ettore_Liotta_CV-it.pdf' : '/Portfolio/documents/Ettore_Liotta_CV-en.pdf'}
+                        download={currentLang === 'it' ? 'Ettore_Liotta_CV-it.pdf' : 'Ettore_Liotta_CV-en.pdf'}
                         className={`cv-download-btn ${showName ? 'show-name' : ''}`}
                         id="cvDownloadBtn"
                         onClick={handleCVButtonClick}
@@ -215,7 +208,7 @@ export default function Navbar({ currentLang, onLanguageChange, t, isSubpage = f
                                 <button
                                     key={key}
                                     className={`language-option ${currentLang === key ? 'active' : ''}`}
-                                    onClick={() => handleLanguageSelect(key as Language)}
+                                    onClick={() => handleLanguageSelect(key)}
                                 >
                                     <img
                                         src={lang.flag}

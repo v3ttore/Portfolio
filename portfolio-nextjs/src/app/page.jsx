@@ -13,15 +13,15 @@ export default function Home() {
   const [pdfModalOpen, setPdfModalOpen] = useState(false);
   const [currentPdfUrl, setCurrentPdfUrl] = useState('');
 
-  const openPdf = (url: string) => {
+  const openPdf = (url) => {
     setCurrentPdfUrl(url);
     setPdfModalOpen(true);
   };
 
   useEffect(() => {
     // Smooth scroll for navigation links
-    const handleClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
+    const handleClick = (e) => {
+      const target = e.target;
       if (target.tagName === 'A' && target.getAttribute('href')?.startsWith('#')) {
         e.preventDefault();
         const id = target.getAttribute('href')?.slice(1);
@@ -48,8 +48,6 @@ export default function Home() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          // Optional: stop watching once visible
-          // observer.unobserve(entry.target);
         }
       });
     }, observerOptions);
@@ -154,7 +152,7 @@ export default function Home() {
                   {t.experience.flybag.description}
                 </ReadMore>
                 <div className="experience-footer">
-                  <a href="https://maps.google.com/?q=Bari,Italia" target="_blank" rel="noopener noreferrer" className="location-badge">Bari, Italia</a>
+                  <a href="https://maps.google.com/?q=Bari,Italia" target="_blank" rel="noopener noreferrer" className="location-badge">{t.locations.bariItaly}</a>
                   <a href="https://flybag.it/" target="_blank" rel="noopener noreferrer" className="btn btn-flybag">
                     {t.buttons.visitSite}
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -190,7 +188,7 @@ export default function Home() {
                 <ReadMore maxLength={120}>
                   {t.experience.ey.description}
                 </ReadMore>
-                <a href="https://maps.google.com/?q=Bari,Italia" target="_blank" rel="noopener noreferrer" className="location-badge">Bari, Italia</a>
+                <a href="https://maps.google.com/?q=Bari,Italia" target="_blank" rel="noopener noreferrer" className="location-badge">{t.locations.bariItaly}</a>
               </div>
             </div>
 
@@ -217,15 +215,13 @@ export default function Home() {
                 <ReadMore maxLength={120}>
                   {t.experience.impactHub.description}
                 </ReadMore>
-                <a href="https://maps.google.com/?q=Fiera+del+Levante,Bari,Italia" target="_blank" rel="noopener noreferrer" className="location-badge">Fiera del Levante, Bari</a>
+                <a href="https://maps.google.com/?q=Fiera+del+Levante,Bari,Italia" target="_blank" rel="noopener noreferrer" className="location-badge">{t.locations.fieraLevanteBari}</a>
               </div>
             </div>
 
           </div>
         </div>
       </section>
-
-
 
       {/* Education Section */}
       <section id="formazione" className="section education">
@@ -255,7 +251,7 @@ export default function Home() {
                   <p className="timeline-description">
                     {t.education.lum.description}
                   </p>
-                  <a href="https://maps.google.com/?q=Casamassima,Bari,Italia" target="_blank" rel="noopener noreferrer" className="location-badge">Casamassima, Bari</a>
+                  <a href="https://maps.google.com/?q=Casamassima,Bari,Italia" target="_blank" rel="noopener noreferrer" className="location-badge">{t.locations.casamassimaBari}</a>
 
                   {/* Sub-experiences */}
                   <div className="timeline-sub-items">
@@ -277,7 +273,7 @@ export default function Home() {
                         <p className="timeline-sub-description">
                           {t.education.westfalische.description}
                         </p>
-                        <a href="https://maps.google.com/?q=Gelsenkirchen,Germany" target="_blank" rel="noopener noreferrer" className="location-badge location-badge-small">Gelsenkirchen, Germania</a>
+                        <a href="https://maps.google.com/?q=Gelsenkirchen,Germany" target="_blank" rel="noopener noreferrer" className="location-badge location-badge-small">{t.locations.gelsenkirchenGermany}</a>
                       </div>
                     </div>
 
@@ -299,7 +295,7 @@ export default function Home() {
                         <p className="timeline-sub-description">
                           {t.education.yesChina.description}
                         </p>
-                        <a href="https://maps.google.com/?q=Hangzhou,Zhejiang,China" target="_blank" rel="noopener noreferrer" className="location-badge location-badge-small">Hangzhou, Zhejiang, Cina</a>
+                        <a href="https://maps.google.com/?q=Hangzhou,Zhejiang,China" target="_blank" rel="noopener noreferrer" className="location-badge location-badge-small">{t.locations.hangzhouChina}</a>
                       </div>
                     </div>
 
@@ -321,7 +317,7 @@ export default function Home() {
                         <p className="timeline-sub-description">
                           {t.education.excelCourse.description}
                         </p>
-                        <a href="https://maps.google.com/?q=Casamassima,Bari,Italia" target="_blank" rel="noopener noreferrer" className="location-badge location-badge-small">Casamassima, Bari</a>
+                        <a href="https://maps.google.com/?q=Casamassima,Bari,Italia" target="_blank" rel="noopener noreferrer" className="location-badge location-badge-small">{t.locations.casamassimaBari}</a>
                       </div>
                     </div>
                   </div>
@@ -343,7 +339,7 @@ export default function Home() {
                     className="timeline-logo"
                   />
                   <div className="timeline-title-group">
-                    <h3>Liceo Scientifico Statale "Gaetano Salvemini"</h3>
+                    <h3>Liceo Scientifico Statale &quot;Gaetano Salvemini&quot;</h3>
                     <p className="timeline-subtitle">{t.education.liceo.degree}</p>
                   </div>
                 </div>
@@ -351,7 +347,7 @@ export default function Home() {
                   <p className="timeline-description">
                     {t.education.liceo.description}
                   </p>
-                  <a href="https://maps.google.com/?q=Bari,Italia" target="_blank" rel="noopener noreferrer" className="location-badge">Bari, Italia</a>
+                  <a href="https://maps.google.com/?q=Bari,Italia" target="_blank" rel="noopener noreferrer" className="location-badge">{t.locations.bariItaly}</a>
                 </div>
               </div>
             </div>
@@ -438,16 +434,6 @@ export default function Home() {
                 <p>{t.interests.stravaDesc}</p>
               </div>
             </a>
-
-            {/* Tools card - hidden for now
-            <a href="/tools" className="interest-card tools-card">
-              <div className="interest-icon">🛠️</div>
-              <div className="interest-content">
-                <h4>{t.interests.creativeTools}</h4>
-                <p>{t.interests.creativeToolsDesc}</p>
-              </div>
-            </a>
-            */}
           </div>
         </div>
       </section>
@@ -458,7 +444,6 @@ export default function Home() {
           <h2 className="section-title">{t.sections.competitions}</h2>
           <div className="competitions-list">
 
-            {/* Hackathon Binp */}
             {/* Hackathon Binp */}
             <div className="competition-card-compact binp-card">
               <div className="competition-compact-header">
@@ -493,7 +478,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Make It A Case */}
             {/* Make It A Case */}
             <div className="competition-card-compact make-it-a-case-card">
               <div className="competition-compact-header">
@@ -535,7 +519,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
 
       <PDFModal
         isOpen={pdfModalOpen}

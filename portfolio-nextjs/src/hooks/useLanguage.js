@@ -1,20 +1,22 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Language, translations, Translations } from '@/i18n/translations';
+import { translations } from '@/i18n/translations';
 
 export function useLanguage() {
-    const [currentLang, setCurrentLang] = useState<Language>('it');
+    const [currentLang, setCurrentLang] = useState('it');
 
     useEffect(() => {
         // Load saved language from localStorage
-        const saved = localStorage.getItem('selectedLanguage') as Language;
+        const saved = localStorage.getItem('selectedLanguage');
         if (saved && translations[saved]) {
-            setCurrentLang(saved);
+            setTimeout(() => {
+                setCurrentLang(saved);
+            }, 0);
         }
     }, []);
 
-    const changeLanguage = (lang: Language) => {
+    const changeLanguage = (lang) => {
         setCurrentLang(lang);
         localStorage.setItem('selectedLanguage', lang);
     };

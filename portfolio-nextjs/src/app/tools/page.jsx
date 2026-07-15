@@ -46,15 +46,15 @@ export default function ToolsPage() {
                             <div className="tool-logo-container">
                                 <Image
                                     src={tool.logo}
-                                    alt={t.interests.tools[tool.name as keyof typeof t.interests.tools].name}
+                                    alt={t.interests.tools[tool.name].name}
                                     width={80}
                                     height={80}
                                     className="tool-logo-img"
                                     unoptimized
                                 />
                             </div>
-                            <h3>{t.interests.tools[tool.name as keyof typeof t.interests.tools].name}</h3>
-                            <p>{t.interests.tools[tool.name as keyof typeof t.interests.tools].description}</p>
+                            <h3>{t.interests.tools[tool.name].name}</h3>
+                            <p>{t.interests.tools[tool.name].description}</p>
                         </div>
                     ))}
                 </div>

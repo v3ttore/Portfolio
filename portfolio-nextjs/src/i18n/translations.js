@@ -1,133 +1,14 @@
-// Translation types
-export type Language = 'it' | 'en' | 'de' | 'fr' | 'es' | 'da';
-
-export interface LanguageInfo {
-    flag: string;
-    code: string;
-    name: string;
-}
-
-export const languages: Record<Language, LanguageInfo> = {
+export const languages = {
     it: { name: 'Italiano', code: 'IT', flag: 'https://flagcdn.com/w40/it.png' },
     en: { name: 'English', code: 'EN', flag: 'https://flagcdn.com/w40/gb.png' },
     de: { name: 'Deutsch', code: 'DE', flag: 'https://flagcdn.com/w40/de.png' },
     fr: { name: 'Français', code: 'FR', flag: 'https://flagcdn.com/w40/fr.png' },
     es: { name: 'Español', code: 'ES', flag: 'https://flagcdn.com/w40/es.png' },
     da: { name: 'Dansk', code: 'DA', flag: 'https://flagcdn.com/w40/dk.png' },
+    zh: { name: '中文', code: 'ZH', flag: 'https://flagcdn.com/w40/cn.png' },
 };
 
-export interface Translations {
-    nav: {
-        experience: string;
-        projects: string;
-        education: string;
-        skills: string;
-        interests: string;
-        competitions: string;
-    };
-    hero: {
-        greeting: string;
-        description: string;
-    };
-    sections: {
-        experience: string;
-        projects: string;
-        education: string;
-        skills: string;
-        interests: string;
-        competitions: string;
-    };
-    footer: {
-        title: string;
-        subtitle: string;
-    };
-    buttons: {
-        downloadCV: string;
-        visitSite: string;
-    };
-    interests: {
-        photography: string;
-        photographyDesc: string;
-        youtube: string;
-        youtubeDesc: string;
-        strava: string;
-        stravaDesc: string;
-        creativeTools: string;
-        creativeToolsDesc: string;
-
-        tools: {
-            figma: { name: string; description: string; };
-            antigravity: { name: string; description: string; };
-            lovable: { name: string; description: string; };
-            notion: { name: string; description: string; };
-            excel: { name: string; description: string; };
-            office: { name: string; description: string; };
-            python: { name: string; description: string; };
-            flutter: { name: string; description: string; };
-        };
-    };
-    experience: {
-        flybag: { role: string; description: string; date: string; };
-        ey: { role: string; description: string; date: string; };
-        impactHub: { role: string; description: string; date: string; };
-    };
-    education: {
-        lum: { degree: string; description: string; date: string; };
-        westfalische: { degree: string; description: string; date: string; };
-        liceo: { degree: string; description: string; date: string; };
-        yesChina: { title: string; description: string; date: string; };
-        excelCourse: { title: string; description: string; date: string; };
-    };
-    skills: {
-        hard: string;
-        soft: string;
-        languages: string;
-        tags: {
-            native: string;
-            fluent: string;
-            beginner: string;
-            problemSolving: string;
-            communication: string;
-            teamWork: string;
-            leadership: string;
-            creativity: string;
-        };
-    };
-    competitions: {
-        binp: { title: string; description: string; pitchTitle: string; pitchText: string; viewProject: string; onlyInItalian?: string; };
-        makeItACase: { description: string; viewProject: string; onlyInItalian?: string; };
-    };
-    youtubePage: {
-        title: string;
-        description: string;
-        channelsTitle: string;
-        channels: {
-            marcelloAscani: string;
-            caffeDesign: string;
-            novaLectio: string;
-            matArmstrong: string;
-            jakiDale: string;
-            mkbhd: string;
-            enricoTartarotti: string;
-            gioPizzi: string;
-            safariUmano: string;
-        };
-    };
-    photographyPage: {
-        title: string;
-        description: string;
-    };
-    languageNames: {
-        it: string;
-        en: string;
-        de: string;
-        fr: string;
-        es: string;
-        da: string;
-    };
-}
-
-export const translations: Record<Language, Translations> = {
+export const translations = {
     it: {
         nav: {
             experience: 'Esperienza',
@@ -136,6 +17,7 @@ export const translations: Record<Language, Translations> = {
             skills: 'Competenze',
             interests: 'Interessi',
             competitions: 'Competizioni',
+            home: 'Home',
         },
         hero: {
             greeting: 'Ciao, io sono',
@@ -156,10 +38,12 @@ export const translations: Record<Language, Translations> = {
         buttons: {
             downloadCV: 'Download CV',
             visitSite: 'Visita il sito',
+            readMore: 'Leggi di più ▼',
+            readLess: 'Leggi meno ▲',
         },
         interests: {
             photography: 'Fotografia',
-            photographyDesc: "I miei scatti preferiti",
+            photographyDesc: 'I miei scatti preferiti',
             youtube: 'YouTube',
             youtubeDesc: 'Canali e contenuti che seguo per informarmi ed incuriosirmi',
             strava: 'Strava Profile',
@@ -204,18 +88,18 @@ export const translations: Record<Language, Translations> = {
         },
         experience: {
             flybag: {
-                role: 'Co-founder & UX/UI Designer',
-                description: "Creazione di un servizio innovativo per migliorare l'esperienza di shopping per i turisti. Responsabile della progettazione dell'interfaccia utente e dell'esperienza complessiva del servizio.",
-                date: '09/2024 - 02/2026',
+                role: 'Co-fondatore & UX/UI Designer',
+                description: "Co-fondazione di una startup che consente ai turisti di spedire direttamente dal negozio gli acquisti effettuati, eliminando la necessità di interfacciarsi con partner logistici locali e semplificando l'esperienza di viaggio e shopping. Responsabile del design UX/UI del servizio, della gestione del team e del coordinamento del progetto.",
+                date: '12/2024 - 02/2026',
             },
             ey: {
                 role: 'Campus Ambassador',
-                description: "Collegamento tra EY e l'università, promozione di eventi e opportunità agli studenti. Organizzazione di attività di networking nel campus per aumentare l'engagement e la consapevolezza dei programmi EY.",
+                description: "Collegamento tra EY e l'università, promozione di eventi e opportunità agli studenti. Attività di formazione per organizzare attività di networking nel campus e aumentare il coinvolgimento degli studenti nei programmi EY.",
                 date: '10/2024 - Presente',
             },
             impactHub: {
                 role: 'Community Host',
-                description: 'Accoglienza ospiti e gestione delle operazioni dello spazio di co-working, garantendo un ambiente professionale. Organizzazione e facilitazione di attività di networking per rafforzare la comunità imprenditoriale locale.',
+                description: 'Accoglienza degli ospiti e gestione delle operazioni dello spazio di co-working, garantendo un ambiente professionale. Organizzazione e facilitazione di attività di networking per rafforzare la comunità imprenditoriale locale.',
                 date: '08/2024 - 11/2024',
             },
         },
@@ -227,7 +111,7 @@ export const translations: Record<Language, Translations> = {
             },
             westfalische: {
                 degree: 'Erasmus+ Exchange Program',
-                description: 'Programma di scambio internazionale per ampliare le competenze in ambito business e management in un contesto europeo.',
+                description: 'Programma di scambio internazionale presso la Westfälische Hochschule (Gelsenkirchen). Corsi seguiti: Management Decisions, International Management, Sviluppo e Istituzioni dell\'Unione Europea & Visita alla BCE di Francoforte, Politica Economica, Tedesco come lingua straniera, Financial Reporting.',
                 date: '09/2025 - 02/2026',
             },
             liceo: {
@@ -252,7 +136,7 @@ export const translations: Record<Language, Translations> = {
             languages: 'Lingue',
             tags: {
                 native: 'Nativo',
-                fluent: 'Fluente - IELTS 6.5',
+                fluent: 'Fluente - IELTS 7.5',
                 beginner: 'Principiante',
                 problemSolving: 'Problem Solving',
                 communication: 'Comunicazione',
@@ -268,6 +152,7 @@ export const translations: Record<Language, Translations> = {
                 pitchTitle: '💡 Il Nostro Pitch',
                 pitchText: "Scarica la nostra presentazione per vedere i dettagli del progetto.",
                 viewProject: "Visualizza Pitch",
+                onlyInItalian: "",
             },
             makeItACase: {
                 description: 'Competizione di business case analysis con team universitario presso LUM. Abbiamo analizzato il caso di "Alveare da Favola".',
@@ -295,6 +180,13 @@ export const translations: Record<Language, Translations> = {
             title: 'Fotografia',
             description: 'Una collezione dei miei scatti preferiti.',
         },
+        locations: {
+            bariItaly: 'Bari, Italia',
+            fieraLevanteBari: 'Fiera del Levante, Bari',
+            casamassimaBari: 'Casamassima, Bari',
+            gelsenkirchenGermany: 'Gelsenkirchen, Germania',
+            hangzhouChina: 'Hangzhou, Zhejiang, Cina',
+        },
         languageNames: {
             it: 'Italiano',
             en: 'Inglese',
@@ -302,6 +194,7 @@ export const translations: Record<Language, Translations> = {
             fr: 'Francese',
             es: 'Spagnolo',
             da: 'Danese',
+            zh: 'Cinese',
         },
     },
     en: {
@@ -312,6 +205,7 @@ export const translations: Record<Language, Translations> = {
             skills: 'Skills',
             interests: 'Interests',
             competitions: 'Competitions',
+            home: 'Home',
         },
         hero: {
             greeting: "Hi, I'm",
@@ -332,6 +226,8 @@ export const translations: Record<Language, Translations> = {
         buttons: {
             downloadCV: 'Download CV',
             visitSite: 'Visit Site',
+            readMore: 'Read more ▼',
+            readLess: 'Read less ▲',
         },
         interests: {
             photography: 'Photography',
@@ -357,17 +253,17 @@ export const translations: Record<Language, Translations> = {
         experience: {
             flybag: {
                 role: 'Co-founder & UX/UI Designer',
-                description: 'Creation of an innovative service to improve the shopping experience for tourists. Responsible for UI design and overall service experience.',
-                date: '09/2024 - 02/2026',
+                description: 'Co-founded a startup enabling tourists to ship their in-store purchases directly from the shop, removing the need to deal with local logistics partners and streamlining the travel and shopping experience. Led UX/UI design of the service, along with team management and project coordination during the early stages of development.',
+                date: '12/2024 - 02/2026',
             },
             ey: {
                 role: 'Campus Ambassador',
-                description: 'Liaison between EY and the university, promoting events and opportunities to students. Organizing on-campus networking activities to increase engagement and awareness of EY programs.',
+                description: 'Liaison between EY and the university, promoting events and opportunities to students. Currently in a training phase to organize on-campus networking activities and increase student engagement with EY programs.',
                 date: '10/2024 - Present',
             },
             impactHub: {
                 role: 'Community Host',
-                description: 'Welcoming guests and managing co-working space operations, ensuring a professional environment. Organizing and facilitating networking activities to strengthen the local entrepreneurial community.',
+                description: 'Welcomed guests and managed co-working space operations, ensuring a professional and welcoming environment. Organized and facilitated networking activities to strengthen the local entrepreneurial community.',
                 date: '08/2024 - 11/2024',
             },
         },
@@ -379,7 +275,7 @@ export const translations: Record<Language, Translations> = {
             },
             westfalische: {
                 degree: 'Erasmus+ Exchange Program',
-                description: 'International exchange program to broaden skills in business and management in a European context.',
+                description: 'International exchange program at Westfälische Hochschule (Gelsenkirchen). Courses attended: Management Decisions, International Management, Development and Institutions of the European Union & Excursion to the ECB in Frankfurt, Economic Policy, German as a Foreign Language, Financial Reporting.',
                 date: '09/2025 - 02/2026',
             },
             liceo: {
@@ -404,7 +300,7 @@ export const translations: Record<Language, Translations> = {
             languages: 'Languages',
             tags: {
                 native: 'Native',
-                fluent: 'Fluent - IELTS 6.5',
+                fluent: 'Fluent - IELTS 7.5',
                 beginner: 'Beginner',
                 problemSolving: 'Problem Solving',
                 communication: 'Communication',
@@ -448,6 +344,13 @@ export const translations: Record<Language, Translations> = {
             title: 'Photography',
             description: 'A collection of my favorite shots.',
         },
+        locations: {
+            bariItaly: 'Bari, Italy',
+            fieraLevanteBari: 'Fiera del Levante, Bari',
+            casamassimaBari: 'Casamassima, Bari',
+            gelsenkirchenGermany: 'Gelsenkirchen, Germany',
+            hangzhouChina: 'Hangzhou, Zhejiang, China',
+        },
         languageNames: {
             it: 'Italian',
             en: 'English',
@@ -455,6 +358,7 @@ export const translations: Record<Language, Translations> = {
             fr: 'French',
             es: 'Spanish',
             da: 'Danish',
+            zh: 'Chinese',
         },
     },
     de: {
@@ -465,6 +369,7 @@ export const translations: Record<Language, Translations> = {
             skills: 'Fähigkeiten',
             interests: 'Interessen',
             competitions: 'Wettbewerbe',
+            home: 'Startseite',
         },
         hero: {
             greeting: 'Hallo, ich bin',
@@ -485,6 +390,8 @@ export const translations: Record<Language, Translations> = {
         buttons: {
             downloadCV: 'Lebenslauf herunterladen',
             visitSite: 'Seite besuchen',
+            readMore: 'Mehr lesen ▼',
+            readLess: 'Weniger lesen ▲',
         },
         interests: {
             photography: 'Fotografie',
@@ -510,12 +417,12 @@ export const translations: Record<Language, Translations> = {
         experience: {
             flybag: {
                 role: 'Mitbegründer & UX/UI Designer',
-                description: 'Entwicklung eines innovativen Dienstes zur Verbesserung des Einkaufserlebnisses für Touristen. Verantwortlich für UI-Design und das gesamte Serviceerlebnis.',
-                date: '09/2024 - 02/2026',
+                description: 'Mitgründung eines Startups, das es Touristen ermöglicht, ihre Einkäufe direkt im Laden zu versenden und so lokale Logistikpartner zu umgehen. Verantwortlich für UX/UI-Design, Teammanagement und Projektkoordination.',
+                date: '12/2024 - 02/2026',
             },
             ey: {
                 role: 'Campus Ambassador',
-                description: 'Verbindung zwischen EY und der Universität, Förderung von Veranstaltungen und Möglichkeiten für Studenten. Organisation von Networking-Aktivitäten auf dem Campus zur Steigerung des Engagements.',
+                description: 'Verbindung zwischen EY und der Universität, Förderung von Veranstaltungen und Möglichkeiten für Studenten. In einer Trainingsphase zur Organisation von Networking-Aktivitäten auf dem Campus.',
                 date: '10/2024 - Heute',
             },
             impactHub: {
@@ -532,7 +439,7 @@ export const translations: Record<Language, Translations> = {
             },
             westfalische: {
                 degree: 'Erasmus+ Austauschprogramm',
-                description: 'Internationales Austauschprogramm zur Erweiterung der Kompetenzen in Wirtschaft und Management in einem europäischen Kontext.',
+                description: 'Internationales Austauschprogramm an der Westfälischen Hochschule (Gelsenkirchen). Kurse: Management Decisions, International Management, Entwicklung und Institutionen der EU & Exkursion zur EZB in Frankfurt, Wirtschaftspolitik, Deutsch als Fremdsprache, Financial Reporting.',
                 date: '09/2025 - 02/2026',
             },
             liceo: {
@@ -557,7 +464,7 @@ export const translations: Record<Language, Translations> = {
             languages: 'Sprachen',
             tags: {
                 native: 'Muttersprache',
-                fluent: 'Fließend - IELTS 6.5',
+                fluent: 'Fließend - IELTS 7.5',
                 beginner: 'Anfänger',
                 problemSolving: 'Problemlösung',
                 communication: 'Kommunikation',
@@ -601,6 +508,13 @@ export const translations: Record<Language, Translations> = {
             title: 'Fotografie',
             description: 'Eine Sammlung meiner Lieblingsaufnahmen.',
         },
+        locations: {
+            bariItaly: 'Bari, Italien',
+            fieraLevanteBari: 'Fiera del Levante, Bari',
+            casamassimaBari: 'Casamassima, Bari',
+            gelsenkirchenGermany: 'Gelsenkirchen, Deutschland',
+            hangzhouChina: 'Hangzhou, Zhejiang, China',
+        },
         languageNames: {
             it: 'Italienisch',
             en: 'Englisch',
@@ -608,6 +522,7 @@ export const translations: Record<Language, Translations> = {
             fr: 'Französisch',
             es: 'Spanisch',
             da: 'Dänisch',
+            zh: 'Chinesisch',
         },
     },
     fr: {
@@ -618,6 +533,7 @@ export const translations: Record<Language, Translations> = {
             skills: 'Compétences',
             interests: 'Intérêts',
             competitions: 'Compétitions',
+            home: 'Accueil',
         },
         hero: {
             greeting: 'Bonjour, je suis',
@@ -638,6 +554,8 @@ export const translations: Record<Language, Translations> = {
         buttons: {
             downloadCV: 'Télécharger CV',
             visitSite: 'Visiter le site',
+            readMore: 'Lire plus ▼',
+            readLess: 'Lire moins ▲',
         },
         interests: {
             photography: 'Photographie',
@@ -663,17 +581,17 @@ export const translations: Record<Language, Translations> = {
         experience: {
             flybag: {
                 role: 'Co-fondateur & UX/UI Designer',
-                description: "Création d'un service innovant pour améliorer l'expérience d'achat des touristes. Responsable de la conception de l'interface utilisateur et de l'expérience globale du service.",
-                date: '09/2024 - 02/2026',
+                description: "Co-fondation d'une startup permettant aux touristes d'expédier leurs achats directement depuis le magasin, supprimant la nécessité de gérer des partenaires logistiques locaux. Responsable du design UX/UI, de la gestion d'équipe et de la coordination du projet.",
+                date: '12/2024 - 02/2026',
             },
             ey: {
                 role: 'Campus Ambassador',
-                description: "Liaison entre EY et l'université, promotion d'événements et d'opportunités pour les étudiants. Organisation d'activités de réseautage sur le campus.",
+                description: "Liaison entre EY et l'université, promotion d'événements et d'opportunités pour les étudiants. En phase de formation pour organiser des activités de réseautage sur le campus.",
                 date: '10/2024 - Présent',
             },
             impactHub: {
                 role: 'Community Host',
-                description: "Accueil des invités et gestion des opérations de l'espace de co-working, assurant un environnement professionnel. Organisation et facilitation d'activités de réseautage.",
+                description: "Accueil des invités et gestion des opérations de l'espace de co-working, assurant un environnement professionnel. Organisation et facilitation d'activités de réseautage pour renforcer la communauté entrepreneuriale locale.",
                 date: '08/2024 - 11/2024',
             },
         },
@@ -685,7 +603,7 @@ export const translations: Record<Language, Translations> = {
             },
             westfalische: {
                 degree: 'Programme d\'échange Erasmus+',
-                description: 'Programme d\'échange international pour élargir les compétences en affaires et en gestion dans un contexte européen.',
+                description: 'Programme d\'échange international à la Westfälische Hochschule (Gelsenkirchen). Cours suivis: Management Decisions, International Management, Développement et Institutions de l\'UE & Excursion à la BCE de Francfort, Politique Économique, Allemand langue étrangère, Financial Reporting.',
                 date: '09/2025 - 02/2026',
             },
             liceo: {
@@ -710,7 +628,7 @@ export const translations: Record<Language, Translations> = {
             languages: 'Langues',
             tags: {
                 native: 'Langue maternelle',
-                fluent: 'Courant - IELTS 6.5',
+                fluent: 'Courant - IELTS 7.5',
                 beginner: 'Débutant',
                 problemSolving: 'Résolution de problèmes',
                 communication: 'Communication',
@@ -754,6 +672,13 @@ export const translations: Record<Language, Translations> = {
             title: 'Photographie',
             description: 'Une collection de mes clichés préférés.',
         },
+        locations: {
+            bariItaly: 'Bari, Italie',
+            fieraLevanteBari: 'Fiera del Levante, Bari',
+            casamassimaBari: 'Casamassima, Bari',
+            gelsenkirchenGermany: 'Gelsenkirchen, Allemagne',
+            hangzhouChina: 'Hangzhou, Zhejiang, Chine',
+        },
         languageNames: {
             it: 'Italien',
             en: 'Anglais',
@@ -761,6 +686,7 @@ export const translations: Record<Language, Translations> = {
             fr: 'Français',
             es: 'Espagnol',
             da: 'Danois',
+            zh: 'Chinois',
         },
     },
     es: {
@@ -771,6 +697,7 @@ export const translations: Record<Language, Translations> = {
             skills: 'Habilidades',
             interests: 'Intereses',
             competitions: 'Competiciones',
+            home: 'Inicio',
         },
         hero: {
             greeting: 'Hola, soy',
@@ -791,6 +718,8 @@ export const translations: Record<Language, Translations> = {
         buttons: {
             downloadCV: 'Descargar CV',
             visitSite: 'Visitar sitio',
+            readMore: 'Leer más ▼',
+            readLess: 'Leer menos ▲',
         },
         interests: {
             photography: 'Fotografía',
@@ -816,17 +745,17 @@ export const translations: Record<Language, Translations> = {
         experience: {
             flybag: {
                 role: 'Cofundador & UX/UI Designer',
-                description: 'Creación de un servicio innovador para mejorar la experiencia de compra de los turistas. Responsable del diseño de la interfaz de usuario y la experiencia general del servicio.',
-                date: '09/2024 - 02/2026',
+                description: 'Cofundación de una startup que permite a los turistas enviar sus compras directamente desde la tienda, eliminando la necesidad de tratar con socios logísticos locales. Responsable del diseño UX/UI, gestión del equipo y coordinación del proyecto.',
+                date: '12/2024 - 02/2026',
             },
             ey: {
                 role: 'Campus Ambassador',
-                description: 'Enlace entre EY y la universidad, promoviendo eventos y oportunidades para los estudiantes. Organización de actividades de networking en el campus.',
+                description: 'Enlace entre EY y la universidad, promoviendo eventos y oportunidades para los estudiantes. En fase de formación para organizar actividades de networking en el campus.',
                 date: '10/2024 - Presente',
             },
             impactHub: {
                 role: 'Community Host',
-                description: 'Recepción de invitados y gestión de las operaciones del espacio de co-working, asegurando un ambiente profesional. Organización y facilitación de actividades de networking.',
+                description: 'Recepción de invitados y gestión de las operaciones del espacio de co-working, asegurando un ambiente profesional. Organización y facilitación de actividades de networking para fortalecer la comunidad emprendedora local.',
                 date: '08/2024 - 11/2024',
             },
         },
@@ -838,7 +767,7 @@ export const translations: Record<Language, Translations> = {
             },
             westfalische: {
                 degree: 'Programa de Intercambio Erasmus+',
-                description: 'Programa de intercambio internacional para ampliar competencias en negocios y gestión en un contexto europeo.',
+                description: 'Programa de intercambio internacional en la Westfälische Hochschule (Gelsenkirchen). Cursos: Management Decisions, International Management, Desarrollo e Instituciones de la UE & Visita al BCE en Frankfurt, Política Económica, Alemán como lengua extranjera, Financial Reporting.',
                 date: '09/2025 - 02/2026',
             },
             liceo: {
@@ -863,7 +792,7 @@ export const translations: Record<Language, Translations> = {
             languages: 'Idiomas',
             tags: {
                 native: 'Nativo',
-                fluent: 'Fluido - IELTS 6.5',
+                fluent: 'Fluido - IELTS 7.5',
                 beginner: 'Principiante',
                 problemSolving: 'Resolución de problemas',
                 communication: 'Comunicación',
@@ -907,6 +836,13 @@ export const translations: Record<Language, Translations> = {
             title: 'Fotografía',
             description: 'Una colección de mis fotos favoritas.',
         },
+        locations: {
+            bariItaly: 'Bari, Italia',
+            fieraLevanteBari: 'Fiera del Levante, Bari',
+            casamassimaBari: 'Casamassima, Bari',
+            gelsenkirchenGermany: 'Gelsenkirchen, Alemania',
+            hangzhouChina: 'Hangzhou, Zhejiang, China',
+        },
         languageNames: {
             it: 'Italiano',
             en: 'Inglés',
@@ -914,6 +850,7 @@ export const translations: Record<Language, Translations> = {
             fr: 'Francés',
             es: 'Español',
             da: 'Danés',
+            zh: 'Chino',
         },
     },
     da: {
@@ -924,6 +861,7 @@ export const translations: Record<Language, Translations> = {
             skills: 'Færdigheder',
             interests: 'Interesser',
             competitions: 'Konkurrencer',
+            home: 'Hjem',
         },
         hero: {
             greeting: 'Hej, jeg er',
@@ -944,6 +882,8 @@ export const translations: Record<Language, Translations> = {
         buttons: {
             downloadCV: 'Download CV',
             visitSite: 'Besøg side',
+            readMore: 'Læs mere ▼',
+            readLess: 'Læs mindre ▲',
         },
         interests: {
             photography: 'Fotografi',
@@ -969,12 +909,12 @@ export const translations: Record<Language, Translations> = {
         experience: {
             flybag: {
                 role: 'Medstifter & UX/UI Designer',
-                description: 'Skabelse af en innovativ service til at forbedre shoppingoplevelsen for turister. Ansvarlig for UI-design og den samlede serviceoplevelse.',
-                date: '09/2024 - 02/2026',
+                description: 'Medstiftede en startup, der giver turister mulighed for at sende deres køb direkte fra butikken, og eliminerer behovet for at håndtere lokale logistikpartnere. Ansvarlig for UX/UI-design, teamledelse og projektkoordinering.',
+                date: '12/2024 - 02/2026',
             },
             ey: {
                 role: 'Campus Ambassador',
-                description: 'Bindeled mellem EY og universitetet, fremme af arrangementer og muligheder for studerende. Organisering af netværksaktiviteter på campus for at øge engagementet.',
+                description: 'Bindeled mellem EY og universitetet, fremme af arrangementer og muligheder for studerende. I en træningsfase for at organisere netværksaktiviteter på campus og øge studenternes engagement.',
                 date: '10/2024 - Nu',
             },
             impactHub: {
@@ -991,7 +931,7 @@ export const translations: Record<Language, Translations> = {
             },
             westfalische: {
                 degree: 'Erasmus+ Udvekslingsprogram',
-                description: 'Internationalt udvekslingsprogram for at udvide kompetencer inden for forretning og ledelse i en europæisk kontekst.',
+                description: 'Internationalt udvekslingsprogram på Westfälische Hochschule (Gelsenkirchen). Kurser: Management Decisions, International Management, EU\'s Udvikling og Institutioner & Ekskursion til ECB i Frankfurt, Økonomisk Politik, Tysk som fremmedsprog, Financial Reporting.',
                 date: '09/2025 - 02/2026',
             },
             liceo: {
@@ -1016,7 +956,7 @@ export const translations: Record<Language, Translations> = {
             languages: 'Sprog',
             tags: {
                 native: 'Modersmål',
-                fluent: 'Flydende - IELTS 6.5',
+                fluent: 'Flydende - IELTS 7.5',
                 beginner: 'Begynder',
                 problemSolving: 'Problemløsning',
                 communication: 'Kommunikation',
@@ -1028,7 +968,7 @@ export const translations: Record<Language, Translations> = {
         competitions: {
             binp: {
                 title: 'Binp Hackathon - Polytechnic of Bari',
-                description: 'Deltagelse i hackathon arrangeret af Binp på Polytechnic of Bari. Idéudvikling af funktionaliteten af en innovativ app til fitnesssektoren.',
+                description: 'Deltagelse i hackathon arrangeret af Binp på Polytechnic of Bari. Idéudvikling af funktionaliteten of en innovativ app til fitnesssektoren.',
                 pitchTitle: '💡 Vores Pitch',
                 pitchText: 'Download vores præsentation for at se projektdetaljerne.',
                 viewProject: 'Se Pitch',
@@ -1060,6 +1000,13 @@ export const translations: Record<Language, Translations> = {
             title: 'Fotografi',
             description: 'En samling af mine yndlingsbilleder.',
         },
+        locations: {
+            bariItaly: 'Bari, Italien',
+            fieraLevanteBari: 'Fiera del Levante, Bari',
+            casamassimaBari: 'Casamassima, Bari',
+            gelsenkirchenGermany: 'Gelsenkirchen, Tyskland',
+            hangzhouChina: 'Hangzhou, Zhejiang, Kina',
+        },
         languageNames: {
             it: 'Italiensk',
             en: 'Engelsk',
@@ -1067,6 +1014,195 @@ export const translations: Record<Language, Translations> = {
             fr: 'Fransk',
             es: 'Spansk',
             da: 'Dansk',
+            zh: 'Kinesisk',
+        },
+    },
+    zh: {
+        nav: {
+            experience: '工作经历',
+            projects: '项目经历',
+            education: '教育背景',
+            skills: '专业技能',
+            interests: '兴趣爱好',
+            competitions: '竞赛经历',
+            home: '首页',
+        },
+        hero: {
+            greeting: '你好，我是',
+            description: '我出生于锡耶纳，在普利亚长大，是一名商务管理专业的大三学生。本作品集展示了代表我个人价值观的项目、经历和兴趣。',
+        },
+        sections: {
+            experience: '工作与项目经历',
+            projects: '项目经历',
+            education: '教育背景',
+            skills: '专业技能',
+            interests: '兴趣爱好',
+            competitions: '竞赛经历',
+        },
+        footer: {
+            title: '联系我！',
+            subtitle: '有项目合作想法，或者只是想打个招呼？',
+        },
+        buttons: {
+            downloadCV: '下载简历',
+            visitSite: '访问网站',
+            readMore: '阅读更多 ▼',
+            readLess: '收起 ▲',
+        },
+        interests: {
+            photography: '摄影',
+            photographyDesc: '我最喜欢的摄影作品',
+            youtube: 'YouTube',
+            youtubeDesc: '我所关注的获取资讯和启发灵感的频道及内容',
+            strava: 'Strava 个人主页',
+            stravaDesc: '运动训练与体育活动记录',
+            creativeTools: '创意工具',
+            creativeToolsDesc: '我用于创意创作的工具和服务',
+
+            tools: {
+                figma: {
+                    name: 'Figma',
+                    description: '用于设计用户界面和实时协作的交互式原型'
+                },
+                antigravity: {
+                    name: 'Antigravity',
+                    description: '用于编程和解决复杂问题的高级 AI 助手'
+                },
+                lovable: {
+                    name: 'Lovable',
+                    description: '利用 AI 快速构建 Web 应用程序的平台'
+                },
+                notion: {
+                    name: 'Notion',
+                    description: '用于整理项目、笔记和文档的一体化工作空间'
+                },
+                excel: {
+                    name: 'Excel',
+                    description: '具备数据分析和电子表格创建的基础知识'
+                },
+                office: {
+                    name: 'Microsoft Office',
+                    description: '熟练使用 Office 办公套件以提高生产力'
+                },
+                python: {
+                    name: 'Python',
+                    description: '具备 Python 编程的基础知识'
+                },
+                flutter: {
+                    name: 'Flutter',
+                    description: '具备跨平台移动应用开发的基础知识'
+                }
+            }
+        },
+        experience: {
+            flybag: {
+                role: '联合创始人 & UX/UI 设计师',
+                description: '联合创立了一家初创公司，允许游客直接从商店寄送购买的商品，无需与当地物流伙伴对接，从而简化了旅行和购物体验。负责服务的 UX/UI 设计、团队管理以及项目协调。',
+                date: '2024年12月 - 2026年2月',
+            },
+            ey: {
+                role: '校园大使',
+                description: '在安永（EY）与大学之间搭建桥梁，向学生推广活动和就业机会。参与培训活动以在校园内组织社交网络活动，提高学生在安永项目中的参与度。',
+                date: '2024年10月 - 至今',
+            },
+            impactHub: {
+                role: '社区运营主持',
+                description: '接待访客并管理共享办公空间的日常运营，确保专业的办公环境。组织和促进社交网络活动，以加强当地的创业社区联系。',
+                date: '2024年8月 - 2024年11月',
+            },
+        },
+        education: {
+            lum: {
+                degree: '商务管理学士学位',
+                description: '专注于企业管理、创新与创业。与团队一起参加了“Make It A Case”竞赛，成功分析并解决实际商业挑战。',
+                date: '2023年 - 2026年',
+            },
+            westfalische: {
+                degree: 'Erasmus+ 交换生项目',
+                description: '在西伐利亚应用技术大学（Gelsenkirchen）进行国际交流学习。修读课程：管理决策、国际管理、欧盟发展与机构（包括参访法兰克福欧洲央行）、经济政策、德语（外语）、财务报告。',
+                date: '2025年9月 - 2026年2月',
+            },
+            liceo: {
+                degree: '理科高中毕业证书',
+                description: '参与戏剧课程、内容创作（广告、摄影、视频编辑）以及外交官协会项目。',
+                date: '2017年 - 2022年',
+            },
+            yesChina: {
+                title: '文化交流项目 (YES China)',
+                description: '参与 YES China 文化交流项目，沉浸式体验中国的文化与教育体系。',
+                date: '2025年5月',
+            },
+            excelCourse: {
+                title: 'Excel 实践工坊',
+                description: '在管理、金融与技术学系成功修读并完成的实践活动。',
+                date: '2024/2025 学年',
+            },
+        },
+        skills: {
+            hard: '专业技能',
+            soft: '软实力',
+            languages: '语言能力',
+            tags: {
+                native: '母语',
+                fluent: '流利 - IELTS 7.5',
+                beginner: '初学者',
+                problemSolving: '解决问题',
+                communication: '沟通能力',
+                teamWork: '团队协作',
+                leadership: '领导力',
+                creativity: '创造力',
+            },
+        },
+        competitions: {
+            binp: {
+                title: 'Binp 黑客马拉松 - 巴里理工大学',
+                description: '参加由 Binp 在巴里理工大学举办的黑客马拉松。策划了健身行业一款创新应用的功能设计。',
+                pitchTitle: '💡 我们的路演简报',
+                pitchText: '下载我们的路演 PPT 了解项目详情。',
+                viewProject: '查看路演 PPT',
+                onlyInItalian: '（仅提供意大利语版本）',
+            },
+            makeItACase: {
+                description: '在 LUM 大学与团队共同参加商业案例分析竞赛。我们分析了“Alveare da Favola”的案例。',
+                viewProject: '查看路演 PPT',
+                onlyInItalian: '（仅提供意大利语版本）',
+            },
+        },
+        youtubePage: {
+            title: 'YouTube',
+            description: '我关注的用于保持信息同步、激发好奇心和学习新事物的频道',
+            channelsTitle: '关注的频道',
+            channels: {
+                marcelloAscani: '企业家与 YouTuber。用简单易懂的方式讲述经济、金融和公司世界。',
+                caffeDesign: '设计、营销、创新与未来。Giuliano、Nanni 和 Riccardo 带来的互联网“小茶馆”式漫谈。',
+                novaLectio: '历史、地缘政治和时事。了解现代世界动态的纪录片。',
+                matArmstrong: '汽车修复与改装。为超跑和被遗弃的车辆提供重获新生的机会。',
+                jakiDale: '科技、旅行和生活方式。用无人机和冒险讲述我的生活与激情。',
+                mkbhd: '科技领域的风向标。关于智能手机和各种数码硬件的高品质评测。',
+                enricoTartarotti: '设计的科技心理学。深入分析我们日常使用的数字化产品。',
+                gioPizzi: '政治分析与社会评论。关于时事和社会的思考启发点。',
+                safariUmano: '人文故事与旅行冒险。探索世界各地的文化与人物。',
+            },
+        },
+        photographyPage: {
+            title: '摄影',
+            description: '我最喜欢的摄影作品合集。',
+        },
+        locations: {
+            bariItaly: '巴里，意大利',
+            fieraLevanteBari: '巴里利凡特展览会 (Fiera del Levante)',
+            casamassimaBari: '卡萨马西马，巴里',
+            gelsenkirchenGermany: '盖尔森基兴，德国',
+            hangzhouChina: '杭州，浙江，中国',
+        },
+        languageNames: {
+            it: '意大利语',
+            en: '英语',
+            de: '德语',
+            fr: '法语',
+            es: '西班牙语',
+            da: '丹麦语',
+            zh: '中文',
         },
     },
 };

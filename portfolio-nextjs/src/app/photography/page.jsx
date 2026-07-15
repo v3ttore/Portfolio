@@ -14,7 +14,7 @@ const photos = [
 ];
 
 export default function PhotographyPage() {
-    const [selectedPhoto, setSelectedPhoto] = useState<typeof photos[0] | null>(null);
+    const [selectedPhoto, setSelectedPhoto] = useState(null);
     const { t } = useLanguage();
 
     return (
@@ -76,8 +76,6 @@ export default function PhotographyPage() {
                     <button className="lightbox-close" onClick={() => setSelectedPhoto(null)}>×</button>
                 </div>
             )}
-
-
         </>
     );
 }

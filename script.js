@@ -29,7 +29,8 @@ const languages = {
     'de': { flag: '🇩🇪', code: 'DE', name: 'Deutsch' },
     'da': { flag: '🇩🇰', code: 'DA', name: 'Dansk' },
     'fr': { flag: '🇫🇷', code: 'FR', name: 'Français' },
-    'es': { flag: '🇪🇸', code: 'ES', name: 'Español' }
+    'es': { flag: '🇪🇸', code: 'ES', name: 'Español' },
+    'zh': { flag: '🇨🇳', code: 'ZH', name: '中文' }
 };
 
 // Toggle dropdown
@@ -193,6 +194,26 @@ const translations = {
         'project.ongoing': 'I gang',
         'project.completed': 'Afsluttet',
         'project.visit': 'Besøg hjemmeside'
+    },
+    'zh': {
+        'nav.projects': '个人项目',
+        'nav.education': '教育背景',
+        'nav.experience': '工作经历',
+        'nav.skills': '专业技能',
+        'nav.contact': '联系我',
+        'hero.greeting': '你好，我是',
+        'hero.subtitle': '商务分析师 & 网页开发人员',
+        'hero.description': '我将复杂的数据转化为制胜策略，并将创意想法转化为引人入胜的数字化体验。',
+        'section.projects': '个人项目',
+        'section.education': '教育背景',
+        'section.skills': '技能与兴趣',
+        'section.experience': '工作经历',
+        'section.contact': '联系我',
+        'contact.intro': '我对新的机会和合作非常感兴趣。随时欢迎与我联系！',
+        'btn.download_cv': '下载简历',
+        'project.ongoing': '进行中',
+        'project.completed': '已完成',
+        'project.visit': '访问网站'
     }
 };
 
@@ -224,6 +245,7 @@ function updatePageContent(lang) {
         else if (lang === 'fr') heroSubtitle.innerHTML = `Business Analyst & <span class="text-gradient">Développeur Web</span>`;
         else if (lang === 'es') heroSubtitle.innerHTML = `Analista de Negocios y <span class="text-gradient">Desarrollador Web</span>`;
         else if (lang === 'da') heroSubtitle.innerHTML = `Business Analyst & <span class="text-gradient">Web Developer</span>`;
+        else if (lang === 'zh') heroSubtitle.innerHTML = `商务分析师 & <span class="text-gradient">网页开发人员</span>`;
     }
 }
 

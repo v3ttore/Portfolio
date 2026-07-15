@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -9,7 +8,7 @@ const inter = Inter({
   display: "swap",
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Ettore Liotta - Portfolio",
   description: "Portfolio di Ettore Liotta - Business Administration student, UX/UI Designer, and Co-founder of FlyBag",
   icons: {
@@ -21,11 +20,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }) {
   return (
     <html lang="it">
       <body className={inter.className} suppressHydrationWarning>

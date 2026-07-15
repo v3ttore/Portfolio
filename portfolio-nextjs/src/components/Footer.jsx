@@ -3,11 +3,7 @@
 import Image from 'next/image';
 import { useLanguage } from '@/hooks/useLanguage';
 
-interface FooterProps {
-    t?: any; // Made optional to prevent errors if not passed immediately, using hook internally
-}
-
-export default function Footer({ }: FooterProps) {
+export default function Footer() {
     const { t } = useLanguage();
 
     return (
@@ -132,11 +128,6 @@ export default function Footer({ }: FooterProps) {
                     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
                 }
 
-                /* Specific Hover Colors for Footer Socials */
-                /* Use :global or just verify if styled-jsx supports simple targeting.
-                   Since we can't easily add class names dynamically here without changing JSX, 
-                   we'll target by href or nth-child, OR better, add classes in JSX.
-                */
                 .footer-social-link.linkedin:hover {
                     color: #0077B5;
                 }

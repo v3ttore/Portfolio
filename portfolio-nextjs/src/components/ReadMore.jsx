@@ -1,15 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useLanguage } from '@/hooks/useLanguage';
 
-interface ReadMoreProps {
-    children: React.ReactNode;
-    maxLength: number;
-}
-
-export default function ReadMore({ children, maxLength }: ReadMoreProps) {
+export default function ReadMore({ children, maxLength }) {
     const [isExpanded, setIsExpanded] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
+    const { t } = useLanguage();
 
     const text = typeof children === 'string' ? children : '';
     const shouldTruncate = text.length > maxLength;
@@ -41,7 +38,7 @@ export default function ReadMore({ children, maxLength }: ReadMoreProps) {
                 className="read-more-btn"
                 aria-expanded={isExpanded}
             >
-                {isExpanded ? 'Leggi meno ▲' : 'Leggi di più ▼'}
+                {isExpanded ? t.buttons.readLess : t.buttons.readMore}
             </button>
         </div>
     );

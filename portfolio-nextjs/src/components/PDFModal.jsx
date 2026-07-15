@@ -1,23 +1,22 @@
 import { useEffect, useState } from 'react';
 
-interface PDFModalProps {
-    isOpen: boolean;
-    onClose: () => void;
-    pdfUrl: string;
-}
-
-export default function PDFModal({ isOpen, onClose, pdfUrl }: PDFModalProps) {
+export default function PDFModal({ isOpen, onClose, pdfUrl }) {
     const [isLoading, setIsLoading] = useState(true);
+    const [prevPdfUrl, setPrevPdfUrl] = useState(pdfUrl);
+
+    if (pdfUrl !== prevPdfUrl) {
+        setPrevPdfUrl(pdfUrl);
+        setIsLoading(true);
+    }
 
     useEffect(() => {
-        const handleEsc = (e: KeyboardEvent) => {
+        const handleEsc = (e) => {
             if (e.key === 'Escape') onClose();
         };
 
         if (isOpen) {
             document.addEventListener('keydown', handleEsc);
             document.body.style.overflow = 'hidden'; // Prevent background scrolling
-            setIsLoading(true); // Reset loading state when opening
         }
 
         return () => {
