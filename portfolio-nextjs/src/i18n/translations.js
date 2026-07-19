@@ -95,7 +95,7 @@ export const translations = {
             ey: {
                 role: 'Campus Ambassador',
                 description: "Collegamento tra EY e l'università, promozione di eventi e opportunità agli studenti. Attività di formazione per organizzare attività di networking nel campus e aumentare il coinvolgimento degli studenti nei programmi EY.",
-                date: '10/2024 - Presente',
+                date: '10/2024 - 07/2026',
             },
             impactHub: {
                 role: 'Community Host',
@@ -264,7 +264,7 @@ export const translations = {
             ey: {
                 role: 'Campus Ambassador',
                 description: 'Liaison between EY and the university, promoting events and opportunities to students. Currently in a training phase to organize on-campus networking activities and increase student engagement with EY programs.',
-                date: '10/2024 - Present',
+                date: '10/2024 - 07/2026',
             },
             impactHub: {
                 role: 'Community Host',
@@ -433,7 +433,7 @@ export const translations = {
             ey: {
                 role: 'Campus Ambassador',
                 description: 'Verbindung zwischen EY und der Universität, Förderung von Veranstaltungen und Möglichkeiten für Studenten. In einer Trainingsphase zur Organisation von Networking-Aktivitäten auf dem Campus.',
-                date: '10/2024 - Heute',
+                date: '10/2024 - 07/2026',
             },
             impactHub: {
                 role: 'Community Host',
@@ -602,7 +602,7 @@ export const translations = {
             ey: {
                 role: 'Campus Ambassador',
                 description: "Liaison entre EY et l'université, promotion d'événements et d'opportunités pour les étudiants. En phase de formation pour organiser des activités de réseautage sur le campus.",
-                date: '10/2024 - Présent',
+                date: '10/2024 - 07/2026',
             },
             impactHub: {
                 role: 'Community Host',
@@ -771,7 +771,7 @@ export const translations = {
             ey: {
                 role: 'Campus Ambassador',
                 description: 'Enlace entre EY y la universidad, promoviendo eventos y oportunidades para los estudiantes. En fase de formación para organizar actividades de networking en el campus.',
-                date: '10/2024 - Presente',
+                date: '10/2024 - 07/2026',
             },
             impactHub: {
                 role: 'Community Host',
@@ -940,7 +940,7 @@ export const translations = {
             ey: {
                 role: 'Campus Ambassador',
                 description: 'Bindeled mellem EY og universitetet, fremme af arrangementer og muligheder for studerende. I en træningsfase for at organisere netværksaktiviteter på campus og øge studenternes engagement.',
-                date: '10/2024 - Nu',
+                date: '10/2024 - 07/2026',
             },
             impactHub: {
                 role: 'Community Host',
@@ -1133,7 +1133,7 @@ export const translations = {
             ey: {
                 role: '校园大使',
                 description: '在安永（EY）与大学之间搭建桥梁，向学生推广活动和就业机会。参与培训活动以在校园内组织社交网络活动，提高学生在安永项目中的参与度。',
-                date: '2024年10月 - 至今',
+                date: '2024年10月 - 2026年7月',
             },
             impactHub: {
                 role: '社区运营主持',
