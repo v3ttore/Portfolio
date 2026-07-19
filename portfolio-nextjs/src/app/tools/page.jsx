@@ -37,8 +37,8 @@ export default function ToolsPage() {
             <div className="container" style={{ paddingTop: '120px' }}>
                 <header className="page-header" style={{ textAlign: 'center' }}>
                     <h1>🛠️ {t.interests.creativeTools}</h1>
-                    <p>{t.interests.creativeToolsDesc}</p>
                 </header>
+                <p className="page-description">{t.interests.creativeToolsDesc}</p>
 
                 <div className="tools-grid-page">
                     {tools.map((tool) => (

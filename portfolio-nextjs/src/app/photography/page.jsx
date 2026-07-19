@@ -36,8 +36,8 @@ export default function PhotographyPage() {
             <div className="container">
                 <header className="page-header">
                     <h1>{t.photographyPage.title}</h1>
-                    <p>{t.photographyPage.description}</p>
                 </header>
+                <p className="page-description">{t.photographyPage.description}</p>
 
                 <div className="gallery-masonry">
                     {photos.map((photo) => (
