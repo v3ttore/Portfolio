@@ -249,8 +249,28 @@ function updatePageContent(lang) {
     }
 }
 
-// Load saved language on page load
-const savedLang = localStorage.getItem('selectedLanguage') || 'it';
+// Detect user preferred language based on browser configuration
+function detectUserLanguage() {
+    const supported = ['it', 'en', 'de', 'fr', 'es', 'da', 'zh'];
+    const langs = navigator.languages || [navigator.language || navigator.userLanguage];
+    
+    for (const lang of langs) {
+        if (!lang) continue;
+        const cleanLang = lang.toLowerCase().split('-')[0];
+        if (supported.includes(cleanLang)) {
+            return cleanLang;
+        }
+    }
+    return 'en';
+}
+
+// Load saved language on page load or detect automatically
+let savedLang = localStorage.getItem('selectedLanguage');
+if (!savedLang || !languages[savedLang]) {
+    savedLang = detectUserLanguage();
+    localStorage.setItem('selectedLanguage', savedLang);
+}
+
 const savedLanguage = languages[savedLang];
 if (savedLanguage) {
     currentLangSpan.textContent = `${savedLanguage.flag} ${savedLanguage.code}`;
@@ -258,6 +278,8 @@ if (savedLanguage) {
     if (activeOption) {
         activeOption.classList.add('active');
     }
+    // Set page content dynamically to the chosen language immediately on load
+    updatePageContent(savedLang);
 }
 
 // ===== Navbar Scroll Effect =====
