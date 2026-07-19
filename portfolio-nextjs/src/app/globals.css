@@ -2850,9 +2850,9 @@ img {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
-    padding: 120px 0 60px;
+    padding: 120px 0 10px;
 }
 
 .youtube-logo {
