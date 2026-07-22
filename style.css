@@ -977,7 +977,7 @@ img {
     top: 0;
     bottom: 0;
     width: 2px;
-    background: var(--gradient-primary);
+    background: linear-gradient(180deg, var(--color-primary-dark) 0%, rgba(0, 0, 0, 0.15) 100%);
 }
 
 .timeline-item {
@@ -995,26 +995,54 @@ img {
     border-radius: 50%;
     background: var(--gradient-primary);
     box-shadow: 0 0 0 4px var(--color-bg-primary);
+    transition: all 0.3s ease;
 }
 
 .timeline-content {
     background: white;
     padding: var(--spacing-lg);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    transition: all var(--transition-base);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
 }
 
 .timeline-content:hover {
-    transform: translateX(5px);
+    transform: translateY(-4px) translateX(2px);
     box-shadow: var(--shadow-lg);
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Future Step Timeline Styling */
+.timeline-item.future-step .timeline-marker {
+    background: #000000;
+    box-shadow: 0 0 0 4px var(--color-bg-primary), 0 0 12px rgba(0, 0, 0, 0.25);
+}
+
+.timeline-item.future-step .timeline-content {
+    border-left: 3px solid #000000;
+    background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+}
+
+.timeline-badge {
+    display: inline-block;
+    background: #000000;
+    color: #ffffff;
+    padding: 3px 12px;
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 .timeline-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: var(--spacing-sm);
     margin-bottom: var(--spacing-sm);
+    flex-wrap: wrap;
 }
 
 .timeline-date {
@@ -1042,49 +1070,7 @@ img {
     font-weight: var(--font-weight-medium);
 }
 
-/* ===== Engineering Section ===== */
-
-
-.engineering-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-xl);
-}
-
-.engineering-card {
-    background: white;
-    padding: var(--spacing-xl);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    text-align: center;
-    transition: all var(--transition-base);
-    border: 1px solid var(--color-border);
-}
-
-.engineering-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
-    border-color: var(--color-primary);
-}
-
-.card-icon {
-    font-size: 3rem;
-    margin-bottom: var(--spacing-md);
-}
-
-.engineering-card h3 {
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-text-primary);
-}
-
-.engineering-card p {
-    color: var(--color-text-secondary);
-    line-height: 1.8;
-}
-
 /* ===== Experience Section ===== */
-
-
 .experience-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -1094,16 +1080,76 @@ img {
 .experience-card {
     background: white;
     padding: var(--spacing-xl);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    transition: all var(--transition-base);
-    border-left: 4px solid transparent;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--color-primary);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
 }
 
 .experience-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
-    border-left-color: var(--color-primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* EY - Yellow Highlight */
+.experience-card.ey-card {
+    border-left-color: #FFD100;
+}
+
+.experience-card.ey-card:hover {
+    border-left-color: #FFD100;
+    border-color: rgba(255, 209, 0, 0.4);
+}
+
+.experience-card.ey-card .experience-role {
+    background: rgba(255, 209, 0, 0.15);
+    color: #8c6d00;
+}
+
+.experience-card.ey-card:hover .experience-role {
+    background: #FFD100;
+    color: #000000;
+}
+
+/* FlyBag - Green Highlight */
+.experience-card.flybag-card {
+    border-left-color: #4CAF50;
+}
+
+.experience-card.flybag-card:hover {
+    border-left-color: #4CAF50;
+    border-color: rgba(76, 175, 80, 0.4);
+}
+
+.experience-card.flybag-card .experience-role {
+    background: rgba(76, 175, 80, 0.12);
+    color: #2e7d32;
+}
+
+.experience-card.flybag-card:hover .experience-role {
+    background: #4CAF50;
+    color: #ffffff;
+}
+
+/* Impact Hub - Burgundy Highlight */
+.experience-card.impacthub-card {
+    border-left-color: #A0353A;
+}
+
+.experience-card.impacthub-card:hover {
+    border-left-color: #A0353A;
+    border-color: rgba(160, 53, 58, 0.4);
+}
+
+.experience-card.impacthub-card .experience-role {
+    background: rgba(160, 53, 58, 0.12);
+    color: #A0353A;
+}
+
+.experience-card.impacthub-card:hover .experience-role {
+    background: #A0353A;
+    color: #ffffff;
 }
 
 .experience-header {
@@ -1302,13 +1348,26 @@ img {
     border-radius: 20px;
     font-size: 0.9rem;
     color: var(--color-text-primary);
-    border: 1px solid transparent;
-    transition: all 0.2s ease;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .skill-tag:hover {
     border-color: var(--color-primary);
     background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.skill-tag-learning {
+    border: 1px dashed var(--color-primary);
+    background: rgba(0, 0, 0, 0.02);
+    font-weight: 500;
+}
+
+.skill-tag-learning:hover {
+    background: #ffffff;
+    border-style: solid;
 }
 
 /* Interests Buttons */

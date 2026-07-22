@@ -99,9 +99,9 @@
     <!-- Experience Section (MOVED TO FIRST) -->
     <section id="esperienza" class="section experience">
         <div class="container">
-            <h2 class="section-title">Esperienza</h2>
+            <h2 class="section-title" data-i18n="section.experience">Esperienza</h2>
             <div class="experience-grid">
-                <div class="experience-card">
+                <div class="experience-card ey-card">
                     <div class="experience-header">
                         <div class="experience-title-group">
                             <h3>Ernst & Young (EY)</h3>
@@ -116,7 +116,7 @@
                     </p>
                     <p class="experience-location">📍 Bari, Italia</p>
                 </div>
-                <div class="experience-card">
+                <div class="experience-card flybag-card">
                     <div class="experience-header">
                         <div class="experience-title-group">
                             <h3>FlyBag</h3>
@@ -131,7 +131,7 @@
                     </p>
                     <p class="experience-location">📍 Bari, Italia</p>
                 </div>
-                <div class="experience-card">
+                <div class="experience-card impacthub-card">
                     <div class="experience-header">
                         <div class="experience-title-group">
                             <h3>Impact Hub Bari</h3>
@@ -154,7 +154,7 @@
     <!-- Projects Section (MOVED TO SECOND, Make It A Case REMOVED) -->
     <section id="progetti" class="section projects">
         <div class="container">
-            <h2 class="section-title">Progetti</h2>
+            <h2 class="section-title" data-i18n="section.projects">Progetti</h2>
             <div class="project-card flybag-card">
                 <div class="project-header">
                     <h3>FlyBag</h3>
@@ -173,7 +173,7 @@
                 </div>
                 <div style="margin-top: var(--spacing-md);">
                     <a href="https://flybag.it/" target="_blank" class="btn btn-flybag">
-                        Visita il sito
+                        <span data-i18n="project.visit">Visita il sito</span>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -189,8 +189,25 @@
     <!-- Formazione Accademica Section (MOVED TO THIRD) -->
     <section id="formazione" class="section education">
         <div class="container">
-            <h2 class="section-title">Formazione Accademica</h2>
+            <h2 class="section-title" data-i18n="section.education">Formazione Accademica</h2>
             <div class="timeline">
+                <!-- YES China Program -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>China Jiliang University</h3>
+                            <span class="timeline-date">08/2025</span>
+                        </div>
+                        <p class="timeline-subtitle" data-i18n="edu.yes_china.subtitle">YES China Program - Academic Exchange</p>
+                        <p class="timeline-description" data-i18n="edu.yes_china.desc">
+                            Programma di scambio accademico e immersione culturale in Cina, prima esperienza fondamentale
+                            per lo sviluppo di un profilo internazionale orientato ai contesti e mercati globali.
+                        </p>
+                        <p class="timeline-location">📍 Hangzhou, Cina</p>
+                    </div>
+                </div>
+
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
@@ -201,12 +218,12 @@
                         <p class="timeline-subtitle">Laurea in Business Administration</p>
                         <p class="timeline-description">
                             Partecipazione con un team alla competizione "Make It A Case", analizzando e risolvendo con
-                            successo
-                            sfide aziendali reali. Focus su gestione aziendale, innovazione e imprenditorialità.
+                            successo sfide aziendali reali. Focus su gestione aziendale, innovazione e imprenditorialità.
                         </p>
                         <p class="timeline-location">📍 Casamassima, Bari</p>
                     </div>
                 </div>
+
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
@@ -217,12 +234,12 @@
                         <p class="timeline-subtitle">Erasmus+ Exchange Program</p>
                         <p class="timeline-description">
                             Programma di scambio internazionale per ampliare le competenze in ambito business e
-                            management
-                            in un contesto europeo.
+                            management in un contesto europeo.
                         </p>
                         <p class="timeline-location">📍 Gelsenkirchen, Germania</p>
                     </div>
                 </div>
+
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
@@ -233,8 +250,7 @@
                         <p class="timeline-subtitle">Curriculum Scientifico Cambridge/Comunicazione</p>
                         <p class="timeline-description">
                             Partecipazione a corsi di teatro, creazione di contenuti (pubblicità, fotografia, video
-                            editing),
-                            e programma Associazione Diplomatici.
+                            editing), e programma Associazione Diplomatici.
                         </p>
                         <p class="timeline-location">📍 Bari, Italia</p>
                     </div>
@@ -243,13 +259,10 @@
         </div>
     </section>
 
-
-
-
     <!-- Competenze Section (Merged) -->
     <section id="competenze" class="section skills">
         <div class="container">
-            <h2 class="section-title">Competenze & Interessi</h2>
+            <h2 class="section-title" data-i18n="section.skills">Competenze & Interessi</h2>
 
             <!-- Redesigned Skills Grid -->
             <div class="skills-container">
@@ -281,6 +294,7 @@
                     <div class="skill-tags">
                         <span class="skill-tag">🇮🇹 Italiano (Nativo)</span>
                         <span class="skill-tag">🇬🇧 Inglese (Fluente)</span>
+                        <span class="skill-tag skill-tag-learning" data-i18n="skill.mandarin">🇨🇳 Mandarino (In apprendimento)</span>
                     </div>
                 </div>
             </div>
@@ -307,15 +321,13 @@
                 </div>
             </div>
         </div>
-        </div>
     </section>
-
 
     <footer class="footer-contact" id="contatti">
         <div class="container">
             <div class="footer-content">
-                <h2 class="footer-title">Parliamone!</h2>
-                <p class="footer-subtitle">Hai un progetto in mente o vuoi solo salutare?</p>
+                <h2 class="footer-title" data-i18n="section.contact">Parliamone!</h2>
+                <p class="footer-subtitle" data-i18n="contact.intro">Hai un progetto in mente o vuoi solo salutare?</p>
 
                 <div class="social-links">
                     <a href="https://linkedin.com/in/ettoreliotta" target="_blank" class="social-btn btn-linkedin">
