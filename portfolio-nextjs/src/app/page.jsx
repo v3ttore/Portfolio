@@ -110,7 +110,7 @@ export default function Home() {
           <div className="hero-image">
             <div className="image-wrapper">
               <Image
-                src="/Portfolio/profile-2026.jpg"
+                src="/Portfolio/profile-2026.png"
                 alt="Ettore Liotta"
                 width={400}
                 height={400}
