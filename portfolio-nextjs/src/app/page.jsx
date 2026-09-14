@@ -128,17 +128,48 @@ export default function Home() {
           <h2 className="section-title">{t.sections.experience}</h2>
           <div className="experience-grid">
 
-            {/* Ernst & Young */}
-            <div className="experience-card">
+            {/* UniStudents */}
+            <div className="experience-card unistudents-card">
               <div className="experience-logo-container">
-                <Image
-                  src="/Portfolio/ey-logo.png"
-                  alt="EY Logo"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  className="experience-logo"
-                />
+                <a href="https://unistudents.app" target="_blank" rel="noopener noreferrer" className="experience-logo-link" title="UniStudents">
+                  <Image
+                    src="/Portfolio/unistudents-logo.png"
+                    alt="UniStudents Logo"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="experience-logo"
+                  />
+                </a>
+              </div>
+              <div className="experience-content">
+                <div className="experience-top">
+                  <div className="experience-title-group">
+                    <h3>UniStudents</h3>
+                    <span className="experience-role">{t.experience.unistudents.role}</span>
+                  </div>
+                  <span className="experience-period">{t.experience.unistudents.date}</span>
+                </div>
+                <ReadMore maxLength={120}>
+                  {t.experience.unistudents.description}
+                </ReadMore>
+                <a href="https://maps.google.com/?q=Bari,Italia" target="_blank" rel="noopener noreferrer" className="location-badge">{t.locations.bariItaly}</a>
+              </div>
+            </div>
+
+            {/* Ernst & Young */}
+            <div className="experience-card ey-card">
+              <div className="experience-logo-container">
+                <a href="https://www.ey.com/it_it" target="_blank" rel="noopener noreferrer" className="experience-logo-link" title="Ernst & Young">
+                  <Image
+                    src="/Portfolio/ey-logo.png"
+                    alt="EY Logo"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="experience-logo"
+                  />
+                </a>
               </div>
               <div className="experience-content">
                 <div className="experience-top">
@@ -156,16 +187,18 @@ export default function Home() {
             </div>
 
             {/* FlyBag */}
-            <div className="experience-card">
+            <div className="experience-card flybag-card">
               <div className="experience-logo-container">
-                <Image
-                  src="/Portfolio/flybag-logo.png"
-                  alt="FlyBag Logo"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  className="experience-logo"
-                />
+                <a href="https://flybag.it/" target="_blank" rel="noopener noreferrer" className="experience-logo-link" title="FlyBag">
+                  <Image
+                    src="/Portfolio/flybag-logo.png"
+                    alt="FlyBag Logo"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="experience-logo"
+                  />
+                </a>
               </div>
               <div className="experience-content">
                 <div className="experience-top">
@@ -178,31 +211,23 @@ export default function Home() {
                 <ReadMore maxLength={120}>
                   {t.experience.flybag.description}
                 </ReadMore>
-                <div className="experience-footer">
-                  <a href="https://maps.google.com/?q=Bari,Italia" target="_blank" rel="noopener noreferrer" className="location-badge">{t.locations.bariItaly}</a>
-                  <a href="https://flybag.it/" target="_blank" rel="noopener noreferrer" className="btn btn-flybag">
-                    {t.buttons.visitSite}
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                  </a>
-                </div>
+                <a href="https://maps.google.com/?q=Bari,Italia" target="_blank" rel="noopener noreferrer" className="location-badge">{t.locations.bariItaly}</a>
               </div>
             </div>
 
             {/* Impact Hub */}
-            <div className="experience-card">
+            <div className="experience-card impacthub-card">
               <div className="experience-logo-container">
-                <Image
-                  src="/Portfolio/impact-hub-logo.png"
-                  alt="Impact Hub Logo"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  className="experience-logo"
-                />
+                <a href="https://bari.impacthub.net/" target="_blank" rel="noopener noreferrer" className="experience-logo-link" title="Impact Hub Bari">
+                  <Image
+                    src="/Portfolio/impact-hub-logo.png"
+                    alt="Impact Hub Logo"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="experience-logo"
+                  />
+                </a>
               </div>
               <div className="experience-content">
                 <div className="experience-top">

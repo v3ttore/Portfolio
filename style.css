@@ -1092,6 +1092,26 @@ img {
     box-shadow: var(--shadow-lg);
 }
 
+/* UniStudents - Purple Highlight */
+.experience-card.unistudents-card {
+    border-left-color: #5D5FEF;
+}
+
+.experience-card.unistudents-card:hover {
+    border-left-color: #5D5FEF;
+    border-color: rgba(93, 95, 239, 0.4);
+}
+
+.experience-card.unistudents-card .experience-role {
+    background: rgba(93, 95, 239, 0.12);
+    color: #5D5FEF;
+}
+
+.experience-card.unistudents-card:hover .experience-role {
+    background: #5D5FEF;
+    color: #ffffff;
+}
+
 /* EY - Yellow Highlight */
 .experience-card.ey-card {
     border-left-color: #FFD100;

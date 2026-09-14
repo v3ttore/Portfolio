@@ -1510,6 +1510,23 @@ img {
     /* Ensure no rounding on logo */
 }
 
+/* Experience Logo Link */
+.experience-logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.experience-logo-link:hover {
+    transform: scale(1.06);
+    opacity: 0.88;
+}
+
 /* Hero Socials */
 .hero-socials {
     display: flex;
@@ -1986,33 +2003,51 @@ img {
 
 /* Brand Color Hover Effects */
 
-/* FlyBag - Teal/Green */
+/* UniStudents - Vibrant Purple */
+.experience-card.unistudents-card:hover,
 .experience-card:nth-child(1):hover {
-    border-color: #00D4AA;
+    border-color: #5D5FEF;
 }
 
+.experience-card.unistudents-card:hover .experience-period,
 .experience-card:nth-child(1):hover .experience-period {
-    color: #00D4AA;
+    color: #5D5FEF;
     background: transparent;
 }
 
 /* EY - Yellow */
+.experience-card.ey-card:hover,
 .experience-card:nth-child(2):hover {
     border-color: #FFD100;
 }
 
+.experience-card.ey-card:hover .experience-period,
 .experience-card:nth-child(2):hover .experience-period {
     color: #FFD100;
     /* Darker yellow for text readability if needed, or keep #FFD100 */
     background: transparent;
 }
 
-/* Impact Hub - Burgundy */
+/* FlyBag - Teal/Green */
+.experience-card.flybag-card:hover,
 .experience-card:nth-child(3):hover {
+    border-color: #00D4AA;
+}
+
+.experience-card.flybag-card:hover .experience-period,
+.experience-card:nth-child(3):hover .experience-period {
+    color: #00D4AA;
+    background: transparent;
+}
+
+/* Impact Hub - Burgundy */
+.experience-card.impacthub-card:hover,
+.experience-card:nth-child(4):hover {
     border-color: #A0353A;
 }
 
-.experience-card:nth-child(3):hover .experience-period {
+.experience-card.impacthub-card:hover .experience-period,
+.experience-card:nth-child(4):hover .experience-period {
     color: #A0353A;
     background: transparent;
 }

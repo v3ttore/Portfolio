@@ -87,6 +87,11 @@ export const translations = {
             }
         },
         experience: {
+            unistudents: {
+                role: 'Ambassador & Tester',
+                description: "Punto di contatto chiave tra la base utenti studentesca e il team di sviluppo di UniStudents per migliorare le funzionalità dell'applicazione. Fornisce feedback diretto su UI/UX e analisi strutturali sulle funzionalità principali dell'app, come i flussi interattivi di rivelazione e accettazione dei voti. Collabora con gli sviluppatori per ottimizzare i percorsi utente, garantendo stati visivi intuitivi e una logica fluida per la sincronizzazione dei libretti accademici.",
+                date: '07/2026 - Presente',
+            },
             flybag: {
                 role: 'Co-fondatore & UX/UI Designer',
                 description: "Co-fondazione di una startup che consente ai turisti di spedire direttamente dal negozio gli acquisti effettuati, eliminando la necessità di interfacciarsi con partner logistici locali e semplificando l'esperienza di viaggio e shopping. Responsabile del design UX/UI del servizio, della gestione del team e del coordinamento del progetto.",
@@ -256,6 +261,11 @@ export const translations = {
             }
         },
         experience: {
+            unistudents: {
+                role: 'Ambassador & Tester',
+                description: 'Act as a key liaison between the student user base and the UniStudent development team to improve application functionality. Provide direct UI/UX feedback and structural insights on core app features, such as the interactive grade revelation and acceptance workflows. Collaborate with developers to refine user journeys, ensuring intuitive visual states and seamless logic for academic list synchronization.',
+                date: '07/2026 - Present',
+            },
             flybag: {
                 role: 'Co-founder & UX/UI Designer',
                 description: 'Co-founded a startup enabling tourists to ship their in-store purchases directly from the shop, removing the need to deal with local logistics partners and streamlining the travel and shopping experience. Led UX/UI design of the service, along with team management and project coordination during the early stages of development.',
@@ -425,6 +435,11 @@ export const translations = {
             }
         },
         experience: {
+            unistudents: {
+                role: 'Ambassador & Tester',
+                description: 'Wichtige Schnittstelle zwischen den Studierenden und dem Entwicklungsteam von UniStudents zur Verbesserung der App-Funktionalität. Direktes UI/UX-Feedback und strukturelle Einblicke in Kernfunktionen der App wie interaktive Notenfreigabe- und Annahmeprozesse. Zusammenarbeit mit Entwicklern zur Optimierung von User Journeys, intuitiven visuellen Zuständen und nahtloser Synchronisationslogik für Studienverläufe.',
+                date: '07/2026 - Heute',
+            },
             flybag: {
                 role: 'Mitbegründer & UX/UI Designer',
                 description: 'Mitgründung eines Startups, das es Touristen ermöglicht, ihre Einkäufe direkt im Laden zu versenden und so lokale Logistikpartner zu umgehen. Verantwortlich für UX/UI-Design, Teammanagement und Projektkoordination.',
@@ -594,6 +609,11 @@ export const translations = {
             }
         },
         experience: {
+            unistudents: {
+                role: 'Ambassador & Tester',
+                description: "Point de contact clé entre les étudiants utilisateurs et l'équipe de développement d'UniStudents pour améliorer les fonctionnalités de l'application. Retour direct sur l'UI/UX et analyses structurelles des fonctionnalités clés, telles que les flux interactifs de révélation et d'acceptation des notes. Collaboration avec les développeurs pour affiner les parcours utilisateurs et garantir une logique fluide de synchronisation des dossiers académiques.",
+                date: '07/2026 - Présent',
+            },
             flybag: {
                 role: 'Co-fondateur & UX/UI Designer',
                 description: "Co-fondation d'une startup permettant aux touristes d'expédier leurs achats directement depuis le magasin, supprimant la nécessité de gérer des partenaires logistiques locaux. Responsable du design UX/UI, de la gestion d'équipe et de la coordination du projet.",
@@ -763,6 +783,11 @@ export const translations = {
             }
         },
         experience: {
+            unistudents: {
+                role: 'Ambassador & Tester',
+                description: 'Enlace clave entre la comunidad de estudiantes y el equipo de desarrollo de UniStudents para mejorar la funcionalidad de la aplicación. Feedback directo de UI/UX y aportes estructurales sobre funciones principales como los flujos interactivos de revelación y aceptación de calificaciones. Colaboración con desarrolladores para optimizar la experiencia de usuario y la sincronización de expedientes académicos.',
+                date: '07/2026 - Presente',
+            },
             flybag: {
                 role: 'Cofundador & UX/UI Designer',
                 description: 'Cofundación de una startup que permite a los turistas enviar sus compras directamente desde la tienda, eliminando la necesidad de tratar con socios logísticos locales. Responsable del diseño UX/UI, gestión del equipo y coordinación del proyecto.',
@@ -932,6 +957,11 @@ export const translations = {
             }
         },
         experience: {
+            unistudents: {
+                role: 'Ambassador & Tester',
+                description: 'Nøgleforbindelse mellem de studerende og udviklingsteamet hos UniStudents for at forbedre appens funktionalitet. Direkte UI/UX-feedback og strukturelle analyser af kernefunktioner som interaktive karaktergodkendelsesforløb. Samarbejde med udviklere for at optimere brugerrejser og sikre intuitiv visuel navigation samt synkronisering af akademiske optegnelser.',
+                date: '07/2026 - Nu',
+            },
             flybag: {
                 role: 'Medstifter & UX/UI Designer',
                 description: 'Medstiftede en startup, der giver turister mulighed for at sende deres køb direkte fra butikken, og eliminerer behovet for at håndtere lokale logistikpartnere. Ansvarlig for UX/UI-design, teamledelse og projektkoordinering.',
@@ -1125,6 +1155,11 @@ export const translations = {
             }
         },
         experience: {
+            unistudents: {
+                role: '品牌大使与测试员',
+                description: '担任学生用户群体与 UniStudents 开发团队之间的关键联络人，推动应用程序的功能改进。针对核心功能（如交互式成绩揭晓与确认流程）提供直接的 UI/UX 反馈与结构性见解。与开发人员紧密合作优化用户旅程，确保直观的视觉呈现及学业档案同步的流畅逻辑。',
+                date: '2026年7月 - 至今',
+            },
             flybag: {
                 role: '联合创始人 & UX/UI 设计师',
                 description: '联合创立了一家初创公司，允许游客直接从商店寄送购买的商品，无需与当地物流伙伴对接，从而简化了旅行和购物体验。负责服务的 UX/UI 设计、团队管理以及项目协调。',
