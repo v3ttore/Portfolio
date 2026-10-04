@@ -134,6 +134,13 @@ export const translations = {
                 description: "Attività frequentata con esito positivo presso il Dipartimento di Management, Finanza e Tecnologia.",
                 date: 'A.A. 2024/2025',
             },
+            thesis: {
+                title: 'Tesi di Laurea',
+                description: 'Transparency in the Value Chain as a New Frontier of Trust for Investors and Consumers: analisi comparata del reporting ESG e di sostenibilità di DHL, UPS e SF Express, per capire perché ogni azienda comunica ciò che comunica (compliance, gestione della responsabilità, competizione di mercato).',
+                date: 'A.A. 2025/2026',
+                read: 'Leggi online',
+                copyright: '© 2026 Ettore Liotta. Tutti i diritti riservati. Solo lettura online.',
+            },
         },
         skills: {
             hard: 'Hard Skills',
@@ -307,6 +314,13 @@ export const translations = {
                 title: 'Excel Laboratory',
                 description: 'Activity attended with positive outcome at the Department of Management, Finance and Technology.',
                 date: 'A.Y. 2024/2025',
+            },
+            thesis: {
+                title: 'Bachelor\'s Thesis',
+                description: 'Transparency in the Value Chain as a New Frontier of Trust for Investors and Consumers: a comparative analysis of the ESG and sustainability reporting of DHL, UPS and SF Express, looking at why each company discloses what it discloses (compliance, liability management, market competition).',
+                date: 'A.Y. 2025/2026',
+                read: 'Read online',
+                copyright: '© 2026 Ettore Liotta. All rights reserved. Online reading only.',
             },
         },
         skills: {
@@ -482,6 +496,13 @@ export const translations = {
                 description: 'Erfolgreich besuchter Kurs am Department für Management, Finanzen und Technologie.',
                 date: 'Studienjahr 2024/2025',
             },
+            thesis: {
+                title: 'Bachelorarbeit',
+                description: 'Transparency in the Value Chain as a New Frontier of Trust for Investors and Consumers: vergleichende Analyse der ESG- und Nachhaltigkeitsberichterstattung von DHL, UPS und SF Express, und warum jedes Unternehmen offenlegt, was es offenlegt (Compliance, Haftungsmanagement, Marktwettbewerb).',
+                date: 'Studienjahr 2025/2026',
+                read: 'Online lesen',
+                copyright: '© 2026 Ettore Liotta. Alle Rechte vorbehalten. Nur Online-Lesen.',
+            },
         },
         skills: {
             hard: 'Hard Skills',
@@ -655,6 +676,13 @@ export const translations = {
                 title: 'Laboratoire Excel',
                 description: 'Activité suivie avec succès au Département de Management, Finance et Technologie.',
                 date: 'A.A. 2024/2025',
+            },
+            thesis: {
+                title: 'Mémoire de licence',
+                description: 'Transparency in the Value Chain as a New Frontier of Trust for Investors and Consumers : analyse comparative du reporting ESG et de durabilité de DHL, UPS et SF Express, pour comprendre pourquoi chaque entreprise communique ce qu\'elle communique (conformité, gestion de la responsabilité, concurrence).',
+                date: 'A.A. 2025/2026',
+                read: 'Lire en ligne',
+                copyright: '© 2026 Ettore Liotta. Tous droits réservés. Lecture en ligne uniquement.',
             },
         },
         skills: {
@@ -830,6 +858,13 @@ export const translations = {
                 description: 'Actividad cursada con resultado positivo en el Departamento de Gestión, Finanzas y Tecnología.',
                 date: 'Curso 2024/2025',
             },
+            thesis: {
+                title: 'Tesis de Grado',
+                description: 'Transparency in the Value Chain as a New Frontier of Trust for Investors and Consumers: análisis comparativo del reporting ESG y de sostenibilidad de DHL, UPS y SF Express, para entender por qué cada empresa comunica lo que comunica (cumplimiento, gestión de la responsabilidad, competencia de mercado).',
+                date: 'Curso 2025/2026',
+                read: 'Leer en línea',
+                copyright: '© 2026 Ettore Liotta. Todos los derechos reservados. Solo lectura en línea.',
+            },
         },
         skills: {
             hard: 'Habilidades Duras',
@@ -1003,6 +1038,13 @@ export const translations = {
                 title: 'Excel Laboratorium',
                 description: 'Aktivitet gennemført med positivt resultat ved Institut for Ledelse, Finans og Teknologi.',
                 date: '2024/2025',
+            },
+            thesis: {
+                title: 'Bachelorprojekt',
+                description: 'Transparency in the Value Chain as a New Frontier of Trust for Investors and Consumers: komparativ analyse af ESG- og bæredygtighedsrapporteringen hos DHL, UPS og SF Express, og hvorfor hver virksomhed rapporterer det, den gør (compliance, ansvarsstyring, markedskonkurrence).',
+                date: '2025/2026',
+                read: 'Læs online',
+                copyright: '© 2026 Ettore Liotta. Alle rettigheder forbeholdes. Kun online læsning.',
             },
         },
         skills: {
@@ -1201,6 +1243,13 @@ export const translations = {
                 title: 'Excel 实践工坊',
                 description: '在管理、金融与技术学系成功修读并完成的实践活动。',
                 date: '2024/2025 学年',
+            },
+            thesis: {
+                title: '毕业论文',
+                description: 'Transparency in the Value Chain as a New Frontier of Trust for Investors and Consumers:对 DHL、UPS 和顺丰 ESG 与可持续发展报告的比较分析,探讨各公司披露内容背后的逻辑(合规、责任管理、市场竞争)。',
+                date: '2025/2026 学年',
+                read: '在线阅读',
+                copyright: '© 2026 Ettore Liotta。保留所有权利。仅限在线阅读。',
             },
         },
         skills: {

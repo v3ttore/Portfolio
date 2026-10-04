@@ -345,6 +345,35 @@ export default function Home() {
                         <a href="https://maps.google.com/?q=Casamassima,Bari,Italia" target="_blank" rel="noopener noreferrer" className="location-badge location-badge-small">{t.locations.casamassimaBari}</a>
                       </div>
                     </div>
+
+                    {/* Bachelor's Thesis */}
+                    <div className="timeline-sub-item" id="tesi">
+                      <Image
+                        src="/Portfolio/lum-logo.png"
+                        alt="LUM Logo"
+                        width={50}
+                        height={50}
+                        className="timeline-sub-logo"
+                      />
+                      <div className="timeline-sub-content">
+                        <div className="timeline-sub-header">
+                          <h4>Università LUM</h4>
+                          <span className="timeline-sub-date">{t.education.thesis.date}</span>
+                        </div>
+                        <p className="timeline-sub-subtitle">{t.education.thesis.title}</p>
+                        <p className="timeline-sub-description">
+                          {t.education.thesis.description}
+                        </p>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
+                          <a href="/Portfolio/thesis/index.html" target="_blank" rel="noopener noreferrer" className="pitch-button">
+                            {t.education.thesis.read}
+                          </a>
+                          <span style={{ fontSize: '0.75rem', color: '#666', fontStyle: 'italic' }}>
+                            {t.education.thesis.copyright}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
