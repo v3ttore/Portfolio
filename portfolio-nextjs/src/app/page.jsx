@@ -268,7 +268,7 @@ export default function Home() {
                     className="timeline-logo"
                   />
                   <div className="timeline-title-group">
-                    <div className="lum-title-row">
+                    <div className="lum-title-row" id="tesi">
                       <h3>LUM – Libera Università Mediterranea</h3>
                       <span className="thesis-cta-wrap">
                         <span className="cta-brand cta-dhl" aria-hidden="true">DHL</span>
@@ -290,34 +290,6 @@ export default function Home() {
 
                   {/* Sub-experiences */}
                   <div className="timeline-sub-items">
-                    {/* Bachelor's Thesis (most recent, shown first) */}
-                    <div className="timeline-sub-item thesis-feature" id="tesi">
-                      <div className="thesis-stripe"></div>
-                      <div className="thesis-top">
-                        <div className="thesis-brands" aria-label="DHL, UPS, SF Express">
-                          <span className="brand-chip dhl">DHL</span>
-                          <span className="brand-chip ups">UPS</span>
-                          <span className="brand-chip sf">SF Express</span>
-                        </div>
-                        <span className="thesis-latest">{t.education.thesis.date}</span>
-                      </div>
-                      <div>
-                        <p className="thesis-title">{t.education.thesis.title}</p>
-                        <p className="timeline-sub-description" style={{ marginTop: '0.5rem' }}>
-                          {t.education.thesis.description}
-                        </p>
-                      </div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
-                        <a href="/Portfolio/thesis/index.html" target="_blank" rel="noopener noreferrer" className="thesis-btn">
-                          {t.education.thesis.read}
-                          <svg className="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                        </a>
-                        <span style={{ fontSize: '0.75rem', color: '#666', fontStyle: 'italic' }}>
-                          {t.education.thesis.copyright}
-                        </span>
-                      </div>
-                    </div>
-
                     {/* Erasmus */}
                     <div className="timeline-sub-item">
                       <Image

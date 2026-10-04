@@ -3174,16 +3174,9 @@ img {
 }
 
 /* =====================================================================
-   THEME V2 - colour & personality layer (overrides, keep at end of file)
+   Light canary background, footer, and "Read my thesis!" button
    ===================================================================== */
 :root {
-    --c-violet: #7c5cff;
-    --c-pink: #ff4d8d;
-    --c-orange: #ff9f1c;
-    --c-teal: #14c8a8;
-    --c-blue: #3b82f6;
-    --gradient-brand: linear-gradient(90deg, var(--c-violet), var(--c-pink), var(--c-orange));
-    /* thesis brand colours (same as in the thesis tables) */
     --dhl-yellow: #ffcc00;
     --dhl-red: #d40511;
     --ups-brown: #351c15;
@@ -3200,7 +3193,6 @@ body {
     background-attachment: fixed;
 }
 
-/* ---- Hero ---- */
 .hero {
     background: transparent;
 }
@@ -3209,15 +3201,6 @@ body {
     width: 900px;
     height: 900px;
     background: radial-gradient(circle, rgba(255, 238, 120, 0.30) 0%, rgba(255, 244, 163, 0.12) 45%, transparent 70%);
-}
-
-.hero .hero-title {
-    background: var(--gradient-brand);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    letter-spacing: -0.02em;
 }
 
 .hero-image .image-wrapper {
@@ -3240,181 +3223,13 @@ body {
     z-index: 1;
 }
 
-/* ---- Titles & nav ---- */
-.section-title::after {
-    width: 90px;
-    height: 5px;
-    background: var(--gradient-brand);
+/* Footer blends with the page background */
+.footer-contact {
+    background: transparent;
 }
 
-.nav-link:hover,
-.nav-link.active {
-    color: var(--c-violet);
-}
-
-/* ---- Experience cards: one accent colour per company ---- */
-.experience-card {
-    --accent: var(--c-violet);
-    border-left: 6px solid var(--accent);
-}
-
-.experience-card.unistudents-card { --accent: #7c5cff; }
-.experience-card.ey-card { --accent: #ffd400; }
-.experience-card.flybag-card { --accent: #14c8a8; }
-.experience-card.impacthub-card { --accent: #b83a3a; }
-
-.experience-card:hover {
-    border-color: var(--accent);
-    box-shadow: 0 14px 34px color-mix(in srgb, var(--accent) 28%, transparent);
-}
-
-.experience-role {
-    background: color-mix(in srgb, var(--accent) 16%, white) !important;
-    color: #1a1a2e !important;
-}
-
-/* ---- Education timeline ---- */
-.timeline-marker {
-    border-color: var(--c-violet);
-}
-
-.timeline-marker::before {
-    background: var(--c-pink);
-}
-
-.timeline-item:nth-child(2) .timeline-marker { border-color: var(--c-orange); }
-.timeline-item:nth-child(2) .timeline-marker::before { background: var(--c-teal); }
-
-.timeline-content:hover {
-    box-shadow: 0 14px 34px rgba(124, 92, 255, 0.16);
-}
-
-.timeline-sub-item:nth-child(2) { border-left-color: #2fa84f; }   /* Erasmus */
-.timeline-sub-item:nth-child(3) { border-left-color: #d4202c; }   /* YES China */
-.timeline-sub-item:nth-child(4) { border-left-color: #a50034; }   /* Excel / LUM */
-
-.timeline-sub-item:nth-child(2):hover { background: rgba(47, 168, 79, 0.07); }
-.timeline-sub-item:nth-child(3):hover { background: rgba(212, 32, 44, 0.06); }
-.timeline-sub-item:nth-child(4):hover { background: rgba(165, 0, 52, 0.06); }
-
-.pitch-button:hover {
-    border-color: transparent;
-    color: #fff;
-    background: var(--gradient-brand);
-}
-
-/* ---- Thesis feature (first item under LUM) ---- */
-.timeline-sub-item.thesis-feature {
-    position: relative;
-    flex-direction: column;
-    gap: 0.9rem;
-    padding: 1.5rem 1.5rem 1.4rem;
-    border-left: none;
-    border-radius: 16px;
-    overflow: hidden;
-    background:
-        linear-gradient(135deg, rgba(255, 204, 0, 0.18), rgba(53, 28, 21, 0.06) 55%, rgba(17, 17, 17, 0.08)),
-        #fffdf5;
-    box-shadow: 0 10px 30px rgba(53, 28, 21, 0.10);
-}
-
-.timeline-sub-item.thesis-feature:hover {
-    transform: translateY(-3px);
-    background:
-        linear-gradient(135deg, rgba(255, 204, 0, 0.26), rgba(53, 28, 21, 0.08) 55%, rgba(17, 17, 17, 0.10)),
-        #fffdf5;
-}
-
-.thesis-feature .thesis-stripe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background: linear-gradient(90deg, var(--dhl-yellow) 0 34%, var(--ups-brown) 34% 67%, var(--sf-black) 67% 100%);
-}
-
-.thesis-feature .thesis-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.thesis-feature .thesis-latest {
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--ups-brown);
-    background: var(--dhl-yellow);
-    padding: 4px 10px;
-    border-radius: 999px;
-}
-
-.thesis-feature .thesis-title {
-    font-size: 1.15rem;
-    font-weight: 700;
-    line-height: 1.3;
-    color: #111;
-}
-
-.thesis-brands {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.brand-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 14px;
-    border-radius: 8px;
-    font-weight: 800;
-    font-size: 0.9rem;
-    letter-spacing: 0.02em;
-    font-style: italic;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-    transition: transform 0.2s ease;
-}
-
-.brand-chip:hover { transform: translateY(-2px) skewX(-4deg); }
-.brand-chip.dhl { background: var(--dhl-yellow); color: var(--dhl-red); }
-.brand-chip.ups { background: var(--ups-brown); color: var(--ups-gold); }
-.brand-chip.sf { background: var(--sf-black); color: #fff; }
-.brand-chip.sf::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #e60012; }
-
-.thesis-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    border-radius: 999px;
-    font-weight: 700;
-    font-size: 0.92rem;
-    color: #1a1a1a;
-    text-decoration: none;
-    background: linear-gradient(90deg, var(--dhl-yellow) 0%, #ffb500 30%, #7a4a2b 65%, var(--sf-black) 100%);
-    background-size: 220% 100%;
-    background-position: 0% 0;
-    box-shadow: 0 6px 16px rgba(255, 181, 0, 0.35);
-    transition: background-position 0.5s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-}
-
-.thesis-btn:hover {
-    background-position: 100% 0;
-    color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 22px rgba(17, 17, 17, 0.35);
-}
-
-.thesis-btn .arrow { transition: transform 0.3s ease; }
-.thesis-btn:hover .arrow { transform: translateX(5px); }
-
-@media (max-width: 600px) {
-    .timeline-sub-item.thesis-feature { padding: 1.2rem; }
+.footer-content {
+    background: rgba(255, 255, 255, 0.65);
 }
 
 /* ---- "Read my thesis!" button next to the LUM title ---- */
@@ -3506,13 +3321,4 @@ body {
 
 @media (max-width: 600px) {
     .lum-title-row { flex-direction: column; align-items: flex-start; }
-}
-
-/* ---- Footer blends with the page background ---- */
-.footer-contact {
-    background: transparent;
-}
-
-.footer-content {
-    background: rgba(255, 255, 255, 0.65);
 }
