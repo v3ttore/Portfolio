@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,noarchive">
+<title>Thesis – Ettore Liotta</title>
+<style>
+  body{margin:0;background:#222;font-family:Arial,sans-serif;color:#eee}
+  header{padding:14px 20px;background:#111;font-size:14px}
+  main{max-width:900px;margin:0 auto;padding:16px}
+  .page{position:relative;margin:0 0 16px}
+  .page img{width:100%;display:block;pointer-events:none;-webkit-user-drag:none;user-select:none}
+  /* transparent layer on top: right-click / long-press hits this, not the image */
+  .page::after{content:"";position:absolute;inset:0}
+  footer{padding:20px;text-align:center;font-size:12px;color:#aaa}
+  @media print{body{display:none}}
+</style></head>
+<body oncontextmenu="return false">
+<header><a href="../index.html#progetti" style="color:#fff">&larr; Portfolio</a> &nbsp;·&nbsp; © 2026 Ettore Liotta. All rights reserved. Read-only version.</header>
+<main id="pages"></main>
+<footer>No copying, redistribution or reuse without written permission.</footer>
+<script>
+  // N = numero di pagine generate da make_thesis_pages.py (pages/p001.jpg ...)
+  const N = 144;
+  const box = document.getElementById('pages');
+  for (let i = 1; i <= N; i++) {
+    const d = document.createElement('div'); d.className = 'page';
+    const im = new Image(); im.loading = 'lazy'; im.draggable = false;
+    im.src = 'pages/p' + String(i).padStart(3, '0') + '.jpg';
+    d.appendChild(im); box.appendChild(d);
+  }
+</script>
+</body></html>
