@@ -278,7 +278,17 @@ export default function Home() {
                     className="timeline-logo"
                   />
                   <div className="timeline-title-group">
-                    <h3>LUM – Libera Università Mediterranea</h3>
+                    <div className="lum-title-row">
+                      <h3>LUM – Libera Università Mediterranea</h3>
+                      <span className="thesis-cta-wrap">
+                        <span className="cta-brand cta-dhl" aria-hidden="true">DHL</span>
+                        <span className="cta-brand cta-ups" aria-hidden="true">UPS</span>
+                        <span className="cta-brand cta-sf" aria-hidden="true">SF Express</span>
+                        <a href="/Portfolio/thesis/index.html" target="_blank" rel="noopener noreferrer" className="thesis-cta">
+                          {t.education.thesis.cta}
+                        </a>
+                      </span>
+                    </div>
                     <p className="timeline-subtitle">{t.education.lum.degree}</p>
                   </div>
                 </div>
