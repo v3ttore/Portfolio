@@ -3507,3 +3507,12 @@ body {
 @media (max-width: 600px) {
     .lum-title-row { flex-direction: column; align-items: flex-start; }
 }
+
+/* ---- Footer blends with the page background ---- */
+.footer-contact {
+    background: transparent;
+}
+
+.footer-content {
+    background: rgba(255, 255, 255, 0.65);
+}
