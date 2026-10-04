@@ -76,16 +76,6 @@ export default function Home() {
             <p className="hero-greeting">{t.hero.greeting}</p>
             <h1 className="hero-title">Ettore Liotta</h1>
             <p className="hero-description">{t.hero.description}</p>
-            <div className="hero-chips">
-              <span className="hero-chip">🇮🇹 Siena → Bari</span>
-              <span className="hero-chip">🇩🇪 Gelsenkirchen</span>
-              <span className="hero-chip">🇨🇳 Hangzhou</span>
-              <span className="hero-chip">🎨 Figma</span>
-              <span className="hero-chip">🐍 Python</span>
-              <span className="hero-chip">📸 Photo</span>
-              <span className="hero-chip">💪 Calisthenics</span>
-              <span className="hero-chip">📦 Supply chain</span>
-            </div>
             <div className="hero-socials">
               <a
                 href="https://www.linkedin.com/in/ettore-liotta/"

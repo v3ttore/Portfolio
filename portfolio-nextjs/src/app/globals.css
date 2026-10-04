@@ -3193,11 +3193,10 @@ img {
 
 body {
     background:
-        radial-gradient(900px 500px at 8% 4%, rgba(124, 92, 255, 0.10), transparent 60%),
-        radial-gradient(800px 500px at 96% 22%, rgba(255, 77, 141, 0.09), transparent 60%),
-        radial-gradient(900px 600px at 10% 62%, rgba(20, 200, 168, 0.08), transparent 60%),
-        radial-gradient(800px 500px at 92% 88%, rgba(255, 159, 28, 0.10), transparent 60%),
-        #fbfbfe;
+        radial-gradient(1100px 600px at 6% 0%, rgba(255, 244, 163, 0.28), transparent 62%),
+        radial-gradient(1000px 600px at 100% 45%, rgba(255, 244, 163, 0.20), transparent 62%),
+        radial-gradient(1000px 600px at 0% 100%, rgba(255, 244, 163, 0.18), transparent 62%),
+        #ffffff;
     background-attachment: fixed;
 }
 
@@ -3209,7 +3208,7 @@ body {
 .hero::before {
     width: 900px;
     height: 900px;
-    background: radial-gradient(circle, rgba(124, 92, 255, 0.22) 0%, rgba(255, 77, 141, 0.12) 40%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 238, 120, 0.30) 0%, rgba(255, 244, 163, 0.12) 45%, transparent 70%);
 }
 
 .hero .hero-title {
@@ -3221,37 +3220,6 @@ body {
     letter-spacing: -0.02em;
 }
 
-.hero-chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 1.2rem 0 1.4rem;
-}
-
-.hero-chip {
-    padding: 6px 12px;
-    border-radius: 999px;
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: #1a1a2e;
-    background: rgba(255, 255, 255, 0.85);
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.hero-chip:hover {
-    transform: translateY(-3px) rotate(-1.5deg);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.10);
-}
-
-.hero-chip:nth-child(6n+1) { background: #efeaff; border-color: #d9ceff; }
-.hero-chip:nth-child(6n+2) { background: #ffe9f1; border-color: #ffc9dc; }
-.hero-chip:nth-child(6n+3) { background: #e3fbf6; border-color: #b5f0e3; }
-.hero-chip:nth-child(6n+4) { background: #fff1dc; border-color: #ffd9a3; }
-.hero-chip:nth-child(6n+5) { background: #e6f0ff; border-color: #bcd3ff; }
-.hero-chip:nth-child(6n+6) { background: #fff8cc; border-color: #ffe97a; }
-
 .hero-image .image-wrapper {
     position: relative;
 }
@@ -3261,9 +3229,9 @@ body {
     position: absolute;
     inset: 4% 2% 0 2%;
     border-radius: 50%;
-    background: conic-gradient(from 200deg, var(--c-violet), var(--c-pink), var(--c-orange), var(--c-teal), var(--c-violet));
-    filter: blur(38px);
-    opacity: 0.45;
+    background: radial-gradient(circle, #fff1a0 0%, #fff8cf 55%, transparent 75%);
+    filter: blur(30px);
+    opacity: 0.8;
     z-index: 0;
 }
 
@@ -3328,19 +3296,6 @@ body {
 .timeline-sub-item:nth-child(2):hover { background: rgba(47, 168, 79, 0.07); }
 .timeline-sub-item:nth-child(3):hover { background: rgba(212, 32, 44, 0.06); }
 .timeline-sub-item:nth-child(4):hover { background: rgba(165, 0, 52, 0.06); }
-
-/* ---- Skills ---- */
-.skill-tag:nth-child(6n+1) { background: #efeaff; }
-.skill-tag:nth-child(6n+2) { background: #ffe9f1; }
-.skill-tag:nth-child(6n+3) { background: #e3fbf6; }
-.skill-tag:nth-child(6n+4) { background: #fff1dc; }
-.skill-tag:nth-child(6n+5) { background: #e6f0ff; }
-.skill-tag:nth-child(6n+6) { background: #fff8cc; }
-
-.skill-tag:hover {
-    border-color: var(--c-violet);
-    box-shadow: 0 6px 14px rgba(124, 92, 255, 0.18);
-}
 
 .pitch-button:hover {
     border-color: transparent;
@@ -3459,7 +3414,6 @@ body {
 .thesis-btn:hover .arrow { transform: translateX(5px); }
 
 @media (max-width: 600px) {
-    .hero-chips { justify-content: flex-start; }
     .timeline-sub-item.thesis-feature { padding: 1.2rem; }
 }
 
