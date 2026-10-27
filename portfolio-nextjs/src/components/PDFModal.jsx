@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { trackEvent } from '@/analytics';
 
 export default function PDFModal({ isOpen, onClose, pdfUrl }) {
     const [isLoading, setIsLoading] = useState(true);
@@ -8,6 +9,10 @@ export default function PDFModal({ isOpen, onClose, pdfUrl }) {
         setPrevPdfUrl(pdfUrl);
         setIsLoading(true);
     }
+
+    useEffect(() => {
+        if (isOpen && pdfUrl) trackEvent(`documento: ${pdfUrl.replace(/^\/Portfolio/, '')}`);
+    }, [isOpen, pdfUrl]);
 
     useEffect(() => {
         const handleEsc = (e) => {
